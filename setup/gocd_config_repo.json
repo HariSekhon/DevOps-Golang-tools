@@ -1,0 +1,26 @@
+{
+  "id": "devops-golang-tools",
+  "plugin_id": "yaml.config.plugin",
+  "material": {
+    "type": "git",
+    "attributes": {
+  	"url": "https://github.com/harisekhon/devops-golang-tools",
+  	"branch": "master",
+  	"auto_update": true
+    }
+  },
+  "configuration": [
+    {
+      "key": "file_pattern",
+      "value": "*.gocd.y*ml"
+    }
+  ],
+  "rules": [
+    {
+  	"directive": "allow",
+  	"action": "*",
+  	"type": "*",
+  	"resource": "*"
+    }
+  ]
+}
