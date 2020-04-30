@@ -227,9 +227,11 @@ Patches, improvements and even general feedback are welcome in the form of GitHu
 
 * [Dockerfiles](https://github.com/HariSekhon/Dockerfiles) - 50+ DockerHub public images for Docker & Kubernetes - Hadoop, Kafka, ZooKeeper, HBase, Cassandra, Solr, SolrCloud, Presto, Apache Drill, Nifi, Spark, Mesos, Consul, Riak, OpenTSDB, Jython, Advanced Nagios Plugins & DevOps Tools repos on Alpine, CentOS, Debian, Fedora, Ubuntu, Superset, H2O, Serf, Alluxio / Tachyon, FakeS3
 
-* [PyLib](https://github.com/harisekhon/pylib) - Golang library leveraged throughout the programs in this repo as a submodule
+* [Go-Lib](https://github.com/harisekhon/go-lib) - Golang library leveraged throughout the programs in this repo as a submodule
 
-* [Perl Lib](https://github.com/harisekhon/lib) - Perl version of above library
+* [PyLib](https://github.com/harisekhon/pylib) - Python library
+
+* [Perl Lib](https://github.com/harisekhon/lib) - Perl library
 
 <!--
 * [Spark Apps eg. Spark => Elasticsearch](https://github.com/harisekhon/spark-to-elasticsearch) - Scala application to index from Spark to Elasticsearch. Used to index data in Hadoop clusters or local data via Spark standalone. This started as a Scala Spark port of ```pig-text-to-elasticsearch.pig``` from this repo.
