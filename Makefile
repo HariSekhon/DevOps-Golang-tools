@@ -59,8 +59,11 @@ init:
 
 .PHONY: golang
 golang: golang-version
-	go build
-	@echo
+	@for x in *.go; do \
+		echo "go build $$x"; \
+		go build "$$x"; \
+		echo; \
+	done
 	@echo 'BUILD SUCCESSFUL (go-tools)'
 
 .PHONY: test-lib
