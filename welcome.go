@@ -26,14 +26,17 @@ import (
 	"math/rand"
 	"os"
 	"os/exec"
+	"os/signal"
 	"os/user"
 	"regexp"
 	"strings"
+	"syscall"
 	"time"
 )
 
 func main() {
 	msg := construct_msg()
+	KeyboardInterruptHandler(msg)
 	print_with_spinner(msg)
 }
 
@@ -154,4 +157,15 @@ func print_with_spinner(msg string) {
 		}
 	}
 	fmt.Println()
+}
+
+func KeyboardInterruptHandler(msg string) {
+	c := make(chan os.Signal)
+	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	go func() {
+		<-c
+		fmt.Printf("\r")
+		fmt.Println(msg)
+		os.Exit(0)
+	}()
 }
