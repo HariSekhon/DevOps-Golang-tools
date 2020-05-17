@@ -45,6 +45,7 @@ func main() {
 		go get_url(url, results)
 	}
 	// print first result
+	// will hang if none succeed - add timeout and more professional handlings like my find_active_server.py program
 	fmt.Println(<-results)
 }
 
