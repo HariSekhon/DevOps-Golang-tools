@@ -82,9 +82,9 @@ basic-test: test-lib
 install: build
 	@echo "No installation needed, just add '$(PWD)' to your \$$PATH"
 
-#.PHONY: clean
-#clean:
-#	cd lib && $(MAKE) clean
+.PHONY: clean
+clean: go-clean
+	@:
 
 #.PHONY: deep-clean
 #deep-clean: clean
