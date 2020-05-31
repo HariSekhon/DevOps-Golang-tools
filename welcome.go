@@ -21,6 +21,7 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"flag"
 	"fmt"
 	"log"
 	"math/rand"
@@ -28,24 +29,42 @@ import (
 	"os/exec"
 	"os/signal"
 	"os/user"
+	"path"
 	"regexp"
 	"strings"
 	"syscall"
 	"time"
 )
 
+var prog = path.Base(os.Args[0])
+var stderr = log.New(os.Stderr, "", 0)
+
 func main() {
+	if os.Getenv("DEBUG") != "" {
+		log.Printf("debug logging enabled")
+	}
+	//flag.Usage = func() {
+	//	stderr.Printf("usage: %s [options]", prog)
+	//	os.Exit(3)
+	//}
+	flag.Parse()
 	msg := construct_msg()
 	KeyboardInterruptHandler(msg)
-	print_with_spinner(msg)
+	// if we're being run in buffered 'go run', just print quickly without spinner
+	matched, _ := regexp.MatchString("/go-build\\d+/[^/]+/exe/[^/]+$", os.Args[0])
+	if os.Getenv("QUICK") != "" || matched {
+		fmt.Println(msg)
+	} else {
+		print_with_spinner(msg)
+	}
 }
 
 func titlecase_user(user string) string {
 	if user == "root" {
 		user = strings.ToUpper(user)
 	} else {
-		match, _ := regexp.MatchString("\\d$", user)
-		if len(user) < 4 && match {
+		matched, _ := regexp.MatchString("\\d$", user)
+		if len(user) < 4 && matched {
 			// probably not a real name
 			// pass
 		} else {
