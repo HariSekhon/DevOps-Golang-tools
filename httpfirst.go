@@ -20,8 +20,8 @@ import (
 	"fmt"
 	log "github.com/sirupsen/logrus"
 	"io/ioutil"
-	"os"
 	"net/http"
+	"os"
 	"path"
 	"regexp"
 )
