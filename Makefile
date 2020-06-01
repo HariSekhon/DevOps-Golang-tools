@@ -61,7 +61,8 @@ init:
 golang: golang-version
 	@for x in *.go; do \
 		echo "go build $$x"; \
-		go build "$$x"; \
+		go build "$$x" || \
+		exit 1; \
 		echo; \
 	done
 	@echo 'BUILD SUCCESSFUL (go-tools)'
