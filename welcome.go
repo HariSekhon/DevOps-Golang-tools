@@ -34,7 +34,7 @@ import (
 	"time"
 )
 
-const DESCRIPTION = `
+const description = `
 Prints a slick welcome message with last login time
 
 Tested on Mac OS X and Linux
@@ -47,7 +47,7 @@ var prog = path.Base(os.Args[0])
 
 func main() {
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s [options]\n\n", DESCRIPTION, prog)
+		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s [options]\n\n", description, prog)
 		flag.PrintDefaults()
 		os.Exit(3)
 	}
@@ -58,7 +58,7 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 		log.Debug("debug logging enabled")
 	}
-	msg := construct_msg()
+	msg := constructMsg()
 	KeyboardInterruptHandler(msg)
 	// if we're being run in buffered 'go run', just print quickly without spinner
 	matched, _ := regexp.MatchString("/go-build\\d+/[^/]+/exe/[^/]+$", os.Args[0])
@@ -69,7 +69,7 @@ func main() {
 	}
 }
 
-func titlecase_user(user string) string {
+func titlecaseUser(user string) string {
 	if user == "root" {
 		user = strings.ToUpper(user)
 	} else {
@@ -84,66 +84,66 @@ func titlecase_user(user string) string {
 	return user
 }
 
-func construct_msg() string {
+func constructMsg() string {
 	user, err := user.Current()
 	if err != nil {
 		log.Fatal(err)
 	}
 	var username string
 	username = user.Username
-	username = titlecase_user(username)
+	username = titlecaseUser(username)
 	msg := fmt.Sprintf("Welcome %s - ", username)
-	msg_no_last_login_info := "no last login information available!"
+	msgNoLastLoginInfo := "no last login information available!"
 	/*
 		last, err := os.Executable("last")
 		if err != nil {
-			msg += msg_no_last_login_info
+			msg += msgNoLastLoginInfo
 			return msg
 		}
 	*/
-	skip_regex := regexp.MustCompile("^(?:reboot|wtmp)|^\\s*$")
-	var stdout_buf, stderr_buf bytes.Buffer
+	regexSkip := regexp.MustCompile("^(?:reboot|wtmp)|^\\s*$")
+	var stdoutBuf, stderrBuf bytes.Buffer
 	cmd := exec.Command("last", "-100")
-	cmd.Stdout = &stdout_buf
-	cmd.Stderr = &stderr_buf
+	cmd.Stdout = &stdoutBuf
+	cmd.Stderr = &stderrBuf
 	err = cmd.Run()
 	if err != nil {
-		msg += msg_no_last_login_info
+		msg += msgNoLastLoginInfo
 		msg += fmt.Sprintf(" ('last' command failed to execute: %s)", err)
 		return msg
 	}
-	stdout, stderr := string(stdout_buf.Bytes()), string(stderr_buf.Bytes())
+	stdout, stderr := string(stdoutBuf.Bytes()), string(stderrBuf.Bytes())
 	if strings.TrimSpace(stderr) != "" {
-		msg += msg_no_last_login_info
+		msg += msgNoLastLoginInfo
 		msg += fmt.Sprintf(" ('last' stderr: %s)", stderr)
 		return msg
 	}
 	lines := strings.Split(stdout, "\n")
-	last_line := ""
+	lastLine := ""
 	for _, line := range lines {
-		if skip_regex.MatchString(line) {
+		if regexSkip.MatchString(line) {
 			continue
 		}
-		last_line = line
+		lastLine = line
 		break
 	}
-	if last_line != "" {
+	if lastLine != "" {
 		msg += "last login was "
-		last_user_regex := regexp.MustCompile("\\s+.*$")
-		last_user := last_user_regex.ReplaceAllString(last_line, "")
-		if last_user == "root" {
-			last_user = "ROOT"
+		regexLastUser := regexp.MustCompile("\\s+.*$")
+		lastUser := regexLastUser.ReplaceAllString(lastLine, "")
+		if lastUser == "root" {
+			lastUser = "ROOT"
 		}
 		date_regex := regexp.MustCompile(".*(\\w{3}\\s+\\w{3}\\s+\\d+)")
-		last_line = date_regex.ReplaceAllString(last_line, "$1")
-		if last_user == "ROOT" {
+		lastLine = date_regex.ReplaceAllString(lastLine, "$1")
+		if lastUser == "ROOT" {
 			msg += "ROOT"
-		} else if strings.ToLower(last_user) == strings.ToLower(username) {
+		} else if strings.ToLower(lastUser) == strings.ToLower(username) {
 			msg += "by you"
 		} else {
-			msg += fmt.Sprintf("by %s", last_user)
+			msg += fmt.Sprintf("by %s", lastUser)
 		}
-		msg += fmt.Sprintf(" => %s", last_line)
+		msg += fmt.Sprintf(" => %s", lastLine)
 	} else {
 		msg += "no last login information available!"
 	}
