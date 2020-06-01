@@ -12,10 +12,6 @@
 //  https://www.linkedin.com/in/harisekhon
 //
 
-// Prints a slick welcome message with last login time
-//
-// Tested on Mac OS X and Linux
-
 package main
 
 import (
@@ -38,6 +34,12 @@ import (
 	"time"
 )
 
+const DESCRIPTION = `
+Prints a slick welcome message with last login time
+
+Tested on Mac OS X and Linux
+`
+
 var prog = path.Base(os.Args[0])
 
 // not compatible with logrus
@@ -48,11 +50,11 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 		log.Debug("debug logging enabled")
 	}
-	// problem is this doesn't print the command line switch options
-	//flag.Usage = func() {
-	//	fmt.Fprintf(os.Stderr, "usage: %s [options]\n", prog)
-	//	os.Exit(3)
-	//}
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s [options]\n\n", DESCRIPTION, prog)
+		flag.PrintDefaults()
+		os.Exit(3)
+	}
 	var quick = flag.Bool("quick", false, "Print instantly without fancy scrolling effect, saves 2-3 seconds (you can also Control-C to make output complete instantly)")
 	flag.Parse()
 	msg := construct_msg()
