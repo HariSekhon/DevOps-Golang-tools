@@ -39,6 +39,8 @@ endif
 
 REPO := HariSekhon/DevOps-Golang-tools
 
+GOPATH := $(PWD)
+
 CODE_FILES := $(shell find . -type f -name '*.go' | grep -v -e bash-tools -e /lib/)
 
 .PHONY: build
@@ -59,6 +61,11 @@ init:
 
 .PHONY: golang
 golang: golang-version
+	@for x in `sed 's/#.*//' setup/deps.txt`; do \
+		echo "go get -u $$x"; \
+		go get -u "$$x" || \
+		exit 1; \
+	done; echo
 	@for x in *.go; do \
 		echo "go build $$x"; \
 		go build "$$x" || \
