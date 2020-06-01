@@ -23,7 +23,9 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"log"
+	//"log"
+	// drop in replacement, with more levels and .SetLevel()
+	log "github.com/sirupsen/logrus"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -37,14 +39,16 @@ import (
 )
 
 var prog = path.Base(os.Args[0])
-var stderr = log.New(os.Stderr, "", 0)
+// not compatible with logrus
+//var stderr = log.New(os.Stderr, "", 0)
 
 func main() {
 	if os.Getenv("DEBUG") != "" {
-		log.Printf("debug logging enabled")
+		log.SetLevel(log.DebugLevel)
+		log.Debug("debug logging enabled")
 	}
 	//flag.Usage = func() {
-	//	stderr.Printf("usage: %s [options]", prog)
+	//	fmt.FPrintf(os.Stderr, "usage: %s [options]", prog)
 	//	os.Exit(3)
 	//}
 	flag.Parse()
