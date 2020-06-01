@@ -39,6 +39,7 @@ import (
 )
 
 var prog = path.Base(os.Args[0])
+
 // not compatible with logrus
 //var stderr = log.New(os.Stderr, "", 0)
 
@@ -47,16 +48,18 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 		log.Debug("debug logging enabled")
 	}
+	// problem is this doesn't print the command line switch options
 	//flag.Usage = func() {
-	//	fmt.FPrintf(os.Stderr, "usage: %s [options]", prog)
+	//	fmt.Fprintf(os.Stderr, "usage: %s [options]\n", prog)
 	//	os.Exit(3)
 	//}
+	var quick = flag.Bool("quick", false, "Print instantly without fancy scrolling effect, saves 2-3 seconds (you can also Control-C to make output complete instantly)")
 	flag.Parse()
 	msg := construct_msg()
 	KeyboardInterruptHandler(msg)
 	// if we're being run in buffered 'go run', just print quickly without spinner
 	matched, _ := regexp.MatchString("/go-build\\d+/[^/]+/exe/[^/]+$", os.Args[0])
-	if os.Getenv("QUICK") != "" || matched {
+	if *quick || os.Getenv("QUICK") != "" || matched {
 		fmt.Println(msg)
 	} else {
 		print_with_spinner(msg)
