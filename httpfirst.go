@@ -69,14 +69,14 @@ func main() {
 		if !httpPrefixRegex.MatchString(url) {
 			url = "http://" + url
 		}
-		go getUrl(url, results)
+		go getURL(url, results)
 	}
 	// print first result
 	// will hang if none succeed - add timeout and more professional handlings like my find_active_server.py program
 	fmt.Println(<-results)
 }
 
-func getUrl(url string, results chan string) {
+func getURL(url string, results chan string) {
 	res, err := http.Get(url)
 	if err != nil {
 		// ignore
