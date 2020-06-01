@@ -42,7 +42,7 @@ Tested on Mac OS X and Linux
 
 var prog = path.Base(os.Args[0])
 
-// not compatible with logrus
+// not compatible with logrus nor necessary, use Fprintf(os.Stderr, ...) instead
 //var stderr = log.New(os.Stderr, "", 0)
 
 func main() {
