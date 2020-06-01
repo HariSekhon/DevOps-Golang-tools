@@ -12,14 +12,12 @@
 //  https://www.linkedin.com/in/harisekhon
 //
 
-// Returns the first HTTP(s) server argument to respond and serve its default page without error
-//
-// See also much more mature version find_active_server.py in DevOps Python tools - https://github.com/harisekhon/DevOps-Python-tools
-
 package main
 
 import (
+	"flag"
 	"fmt"
+	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"os"
 	"net/http"
@@ -27,11 +25,39 @@ import (
 	"regexp"
 )
 
+const DESCRIPTION = `
+Returns the first HTTP(s) server argument to respond and serve its default page without error
+
+See also much more mature version find_active_server.py in DevOps Python tools - https://github.com/harisekhon/DevOps-Python-tools
+`
+
+var prog = path.Base(os.Args[0])
+
 func main() {
-	urls := os.Args[1:]
-	if len(urls) < 1 {
-		fmt.Printf("usage: %s <url> [<url> <url> ...]\n", path.Base(os.Args[0]))
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s <url> [<url> <url> ...]\n\n", DESCRIPTION, prog)
+		flag.PrintDefaults()
 		os.Exit(3)
+	}
+	var debug = flag.Bool("debug", false, "Debug mode")
+	flag.Parse()
+	if *debug || os.Getenv("DEBUG") != "" {
+		log.SetLevel(log.DebugLevel)
+		log.Debug("debug logging enabled")
+	}
+
+	//urls := os.Args[1:]
+	urls := flag.Args()
+	if len(urls) < 1 {
+		//fmt.Printf("usage: %s <url> [<url> <url> ...]\n", path.Base(os.Args[0]))
+		//os.Exit(3)
+		flag.Usage()
+	}
+	for _, url := range urls {
+		matched, _ := regexp.MatchString("^-", url)
+		if matched {
+			flag.Usage()
+		}
 	}
 
 	results := make(chan string)
