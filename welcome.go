@@ -46,17 +46,18 @@ var prog = path.Base(os.Args[0])
 //var stderr = log.New(os.Stderr, "", 0)
 
 func main() {
-	if os.Getenv("DEBUG") != "" {
-		log.SetLevel(log.DebugLevel)
-		log.Debug("debug logging enabled")
-	}
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s [options]\n\n", DESCRIPTION, prog)
 		flag.PrintDefaults()
 		os.Exit(3)
 	}
+	var debug = flag.Bool("debug", false, "Debug mode")
 	var quick = flag.Bool("quick", false, "Print instantly without fancy scrolling effect, saves 2-3 seconds (you can also Control-C to make output complete instantly)")
 	flag.Parse()
+	if *debug || os.Getenv("DEBUG") != "" {
+		log.SetLevel(log.DebugLevel)
+		log.Debug("debug logging enabled")
+	}
 	msg := construct_msg()
 	KeyboardInterruptHandler(msg)
 	// if we're being run in buffered 'go run', just print quickly without spinner
