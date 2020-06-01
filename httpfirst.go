@@ -1,4 +1,5 @@
 //  vim:ts=4:sts=4:sw=4:noet
+//  args: duckduckgo.com google.com
 //
 //  Author: Hari Sekhon
 //  Date: 2020-05-17 16:07:00 +0100 (Sun, 17 May 2020)
@@ -25,7 +26,7 @@ import (
 	"regexp"
 )
 
-const DESCRIPTION = `
+const description = `
 Returns the first HTTP(s) server argument to respond and serve its default page without error
 
 See also much more mature version find_active_server.py in DevOps Python tools - https://github.com/harisekhon/DevOps-Python-tools
@@ -35,7 +36,7 @@ var prog = path.Base(os.Args[0])
 
 func main() {
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s <url> [<url> <url> ...]\n\n", DESCRIPTION, prog)
+		fmt.Fprintf(os.Stderr, "%s\n\nusage: %s <url> [<url> <url> ...]\n\n", description, prog)
 		flag.PrintDefaults()
 		os.Exit(3)
 	}
@@ -62,20 +63,20 @@ func main() {
 
 	results := make(chan string)
 
-	http_prefix_regex := regexp.MustCompile("(?i)^https?://")
+	httpPrefixRegex := regexp.MustCompile("(?i)^https?://")
 
 	for _, url := range urls {
-		if !http_prefix_regex.MatchString(url) {
+		if !httpPrefixRegex.MatchString(url) {
 			url = "http://" + url
 		}
-		go get_url(url, results)
+		go getUrl(url, results)
 	}
 	// print first result
 	// will hang if none succeed - add timeout and more professional handlings like my find_active_server.py program
 	fmt.Println(<-results)
 }
 
-func get_url(url string, results chan string) {
+func getUrl(url string, results chan string) {
 	res, err := http.Get(url)
 	if err != nil {
 		// ignore
