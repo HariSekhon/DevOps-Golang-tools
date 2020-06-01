@@ -59,13 +59,13 @@ func main() {
 		log.Debug("debug logging enabled")
 	}
 	msg := constructMsg()
-	KeyboardInterruptHandler(msg)
+	keyboardInterruptHandler(msg)
 	// if we're being run in buffered 'go run', just print quickly without spinner
 	matched, _ := regexp.MatchString("/go-build\\d+/[^/]+/exe/[^/]+$", os.Args[0])
 	if *quick || os.Getenv("QUICK") != "" || matched {
 		fmt.Println(msg)
 	} else {
-		print_with_spinner(msg)
+		printWithSpinner(msg)
 	}
 }
 
@@ -134,8 +134,8 @@ func constructMsg() string {
 		if lastUser == "root" {
 			lastUser = "ROOT"
 		}
-		date_regex := regexp.MustCompile(".*(\\w{3}\\s+\\w{3}\\s+\\d+)")
-		lastLine = date_regex.ReplaceAllString(lastLine, "$1")
+		regexDate := regexp.MustCompile(".*(\\w{3}\\s+\\w{3}\\s+\\d+)")
+		lastLine = regexDate.ReplaceAllString(lastLine, "$1")
 		if lastUser == "ROOT" {
 			msg += "ROOT"
 		} else if strings.ToLower(lastUser) == strings.ToLower(username) {
@@ -150,7 +150,7 @@ func constructMsg() string {
 	return msg
 }
 
-func print_with_spinner(msg string) {
+func printWithSpinner(msg string) {
 	if strings.TrimSpace(os.Getenv("QUICK")) != "" {
 		fmt.Println(msg)
 		return
@@ -161,7 +161,7 @@ func print_with_spinner(msg string) {
 	// unicode..
 	chars := "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345689@#$%^&*()"
 	charlist := []rune(chars)
-	sleep_duration, err := time.ParseDuration("0.0085s")
+	sleepDuration, err := time.ParseDuration("0.0085s")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -169,26 +169,26 @@ func print_with_spinner(msg string) {
 		fmt.Printf(" ")
 		j := 0
 		for {
-			var random_char rune
+			var randomChar rune
 			if j > 3 {
-				random_char = char
+				randomChar = char
 			} else {
-				random_index := rand.Intn(len(charlist))
-				random_char = charlist[random_index]
+				randomIndex := rand.Intn(len(charlist))
+				randomChar = charlist[randomIndex]
 			}
 			fmt.Printf("\b%s", string(char))
 			stdout.Flush()
-			if char == random_char {
+			if char == randomChar {
 				break
 			}
-			j += 1
-			time.Sleep(sleep_duration)
+			j++
+			time.Sleep(sleepDuration)
 		}
 	}
 	fmt.Println()
 }
 
-func KeyboardInterruptHandler(msg string) {
+func keyboardInterruptHandler(msg string) {
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
