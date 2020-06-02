@@ -32,7 +32,7 @@ Works as a standard unix filter program taking either standard input or files su
 
 Since this must maintain unique lines in memory for comparison, do not use this on very large files/inputs
 
-Ported from a uniq_order_preserved.pl first written in Perl in early 2015 which can be found in the adjacent DevOps Perl tools repo
+Port of Perl program uniq_order_preserved.pl written early 2015 which can be found in the adjacent DevOps Perl tools repo
 
 Tested on Mac OS X and Linux
 `
