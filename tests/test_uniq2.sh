@@ -23,6 +23,8 @@ cd "$srcdir/.."
 # shellcheck disable=SC1091
 . ./tests/utils.sh
 
+section "Testing Uniq2"
+
 run ./uniq2 < tests/data/uniq.txt
 
 run ./uniq2 tests/data/uniq.txt
