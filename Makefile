@@ -126,7 +126,7 @@ install: build
 
 .PHONY: clean
 clean: go-clean
-	@rm -vfr bin
+	@rm -vfr bin bin.darwin.amd64 bin.linux.amd64
 
 #.PHONY: deep-clean
 #deep-clean: clean
