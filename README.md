@@ -161,7 +161,7 @@ https://github.com/HariSekhon/devops-golang-tools/archive/master.zip
 
 https://github.com/HariSekhon/go-lib/archive/master.zip
 
-Unzip both and move Pylib to the ```pylib``` folder under DevOps Golang Tools.
+Unzip both and move go-lib to the ```src/github.com/HariSekhon/``` folder.
 
 ```
 unzip devops-golang-tools-master.zip
@@ -169,7 +169,7 @@ unzip go-lib-master.zip
 
 mv -v devops-golang-tools-master go-tools
 mv -v go-lib-master go-lib
-mv -vf go-lib go-tools/
+mv -vf go-lib go-tools/src/github.com/HariSekhon/
 ```
 -->
 
