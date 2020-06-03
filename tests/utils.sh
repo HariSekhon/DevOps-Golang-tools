@@ -28,3 +28,19 @@ export COMPOSE_PROJECT_NAME="go-tools"
 
 # shellcheck disable=SC1090
 . "$srcdir/excluded.sh"
+
+#export GOBIN="$srcdir/../bin"
+bin="bin"
+
+build(){
+    local target="$1"
+    if [ -f "$bin/$target" ]; then
+        echo "$bin/$target detected"
+        echo
+    else
+        echo "$bin/$target not detected, building now"
+        echo
+        make
+        echo
+    fi
+}
