@@ -39,7 +39,8 @@ endif
 
 REPO := HariSekhon/DevOps-Golang-tools
 
-GOPATH := $(PWD)
+export GOPATH := $(PWD)
+export GOBIN  := $(PWD)/bin
 
 CODE_FILES := $(shell find . -type f -name '*.go' | grep -v -e bash-tools -e /lib/)
 
@@ -61,6 +62,9 @@ init:
 
 .PHONY: golang
 golang: golang-version
+	@echo "GOPATH = $$GOPATH"
+	@echo "GOBIN  = $$GOBIN"
+	@echo
 	@for x in `sed 's/#.*//' setup/deps.txt`; do \
 		if [ -d "src/$$x" ]; then \
 			echo "dependency found: $$x"; \
@@ -70,9 +74,11 @@ golang: golang-version
 			exit 1; \
 		fi; \
 	done; echo
+		@#echo "go build -race -o bin/ $$x"; \
+		@#go build -race -o bin/ "$$x" ||
 	@for x in *.go; do \
-		echo "go build -race -o bin/ $$x"; \
-		go build -race -o bin/ "$$x" || \
+		echo "go install -race $$x"; \
+		go install -race "$$x" || \
 		exit 1; \
 		echo; \
 	done
@@ -96,7 +102,7 @@ install: build
 
 .PHONY: clean
 clean: go-clean
-	@:
+	@rm -vfr bin
 
 #.PHONY: deep-clean
 #deep-clean: clean
