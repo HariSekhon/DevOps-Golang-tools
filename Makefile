@@ -40,7 +40,8 @@ endif
 REPO := HariSekhon/DevOps-Golang-tools
 
 export GOPATH := $(PWD)
-export GOBIN  := $(PWD)/bin
+# use default or allow to be overridden by cross-compiling targets (golang-linux, golang-darwin)
+#export GOBIN  := $(PWD)/bin
 
 CODE_FILES := $(shell find . -type f -name '*.go' | grep -v -e bash-tools -e /lib/)
 
@@ -83,6 +84,19 @@ golang: golang-version
 		echo; \
 	done
 	@echo 'BUILD SUCCESSFUL (go-tools)'
+
+.PHONY: golang-mac
+golang-mac: golang-darwin
+	@:
+
+.PHONY: golang-darwin
+golang-darwin:
+	GOOS=darwin GOARCH=amd64 GOBIN="$$GOPATH/bin.darwin.amd64" $(MAKE) golang
+
+# doesn't work yet, issues with -race and also runtime/cgo(__TEXT/__text): relocation target x_cgo_inittls not defined
+.PHONY: golang-linux
+golang-linux:
+	GOOS=linux GOARCH=amd64 GOBIN="$$GOPATH/bin.linux.amd64" CGO_ENABLED=1 $(MAKE) golang
 
 .PHONY: test-lib
 test-lib:
