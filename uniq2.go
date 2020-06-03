@@ -85,7 +85,7 @@ func uniq(line string, ignoreCase bool, ignoreWhitespace bool) bool {
 func printUniq(filename string, ignoreCase bool, ignoreWhitespace bool) {
 	if filename == "-" {
 		stdin := bufio.NewReader(os.Stdin)
-		process_lines(stdin, ignoreCase, ignoreWhitespace)
+		processLines(stdin, ignoreCase, ignoreWhitespace)
 		return
 	}
 
@@ -95,10 +95,10 @@ func printUniq(filename string, ignoreCase bool, ignoreWhitespace bool) {
 		return
 	}
 	defer filehandle.Close()
-	process_lines(filehandle, ignoreCase, ignoreWhitespace)
+	processLines(filehandle, ignoreCase, ignoreWhitespace)
 }
 
-func process_lines(reader io.Reader, ignoreCase bool, ignoreWhitespace bool) {
+func processLines(reader io.Reader, ignoreCase bool, ignoreWhitespace bool) {
 	var line string
 	scanner := bufio.NewScanner(reader)
 	for scanner.Scan() {
