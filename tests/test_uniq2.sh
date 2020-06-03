@@ -25,12 +25,14 @@ cd "$srcdir/.."
 
 section "Testing Uniq2"
 
-run ./uniq2 < tests/data/uniq.txt
+build uniq2
 
-run ./uniq2 tests/data/uniq.txt
+run "$bin/uniq2" < tests/data/uniq.txt
 
-run ./uniq2 -c tests/data/uniq.txt
+run "$bin/uniq2" tests/data/uniq.txt
 
-run ./uniq2 -w tests/data/uniq.txt
+run "$bin/uniq2" -c tests/data/uniq.txt
 
-run ./uniq2 -c -w tests/data/uniq.txt
+run "$bin/uniq2" -w tests/data/uniq.txt
+
+run "$bin/uniq2" -c -w tests/data/uniq.txt
