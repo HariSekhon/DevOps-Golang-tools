@@ -45,9 +45,9 @@ func main() {
 		flag.PrintDefaults()
 		os.Exit(3)
 	}
-	var debug = flag.Bool("debug", false, "Debug mode")
-	var ignoreCase = flag.Bool("ignore-case", false, "Ignore case in comparisons")
-	var ignoreWhitespace = flag.Bool("ignore-whitespace", false, "Ignore whitespace in comparisons")
+	var debug = flag.Bool("D", false, "Debug mode")
+	var ignoreCase = flag.Bool("c", false, "Ignore case in comparisons")
+	var ignoreWhitespace = flag.Bool("w", false, "Ignore whitespace in comparisons")
 	flag.Parse()
 	if *debug || os.Getenv("DEBUG") != "" {
 		log.SetLevel(log.DebugLevel)
