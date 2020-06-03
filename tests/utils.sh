@@ -32,15 +32,31 @@ export COMPOSE_PROJECT_NAME="go-tools"
 #export GOBIN="$srcdir/../bin"
 bin="bin"
 
+if [ "$(uname -s)" = Darwin ]; then
+    readlink(){ greadlink "$@"; }
+fi
+
 build(){
     local target="$1"
-    if [ -f "$bin/$target" ]; then
-        echo "$bin/$target detected"
+    if [ -n "${REBUILD:-}" ]; then
+        echo "forcing rebuild of $bin/$target"
         echo
+        pushd "$srcdir/.."
+        if is_CI; then
+            set -x
+        fi
+        GOBIN="$(readlink -f "$bin")"
+        GOBIN="$GOBIN" go install -race "$target.go"
+        popd
+        if is_CI; then
+            set +x
+        fi
+    elif [ -f "$bin/$target" ]; then
+        echo "$bin/$target detected"
     else
         echo "$bin/$target not detected, building now"
         echo
         make
-        echo
     fi
+    echo
 }
