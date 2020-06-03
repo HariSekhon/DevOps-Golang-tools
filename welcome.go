@@ -51,8 +51,8 @@ func main() {
 		flag.PrintDefaults()
 		os.Exit(3)
 	}
-	var debug = flag.Bool("debug", false, "Debug mode")
-	var quick = flag.Bool("quick", false, "Print instantly without fancy scrolling effect, saves 2-3 seconds (you can also Control-C to make output complete instantly)")
+	var debug = flag.Bool("D", false, "Debug mode")
+	var quick = flag.Bool("q", false, "Quick - print instantly without fancy scrolling effect, saves 2-3 seconds (you can also Control-C to make output complete instantly)")
 	flag.Parse()
 	if *debug || os.Getenv("DEBUG") != "" {
 		log.SetLevel(log.DebugLevel)
