@@ -35,4 +35,4 @@ fi
 
 run ./welcome
 
-run ./welcome -quick
+run ./welcome -q
