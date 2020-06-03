@@ -35,6 +35,8 @@ fi
 
 build welcome
 
+# $bin defined in tests/utils.sh
+# shellcheck disable=SC2154
 run "$bin/welcome"
 
 run "$bin/welcome" -q
