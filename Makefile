@@ -71,8 +71,8 @@ golang: golang-version
 		fi; \
 	done; echo
 	@for x in *.go; do \
-		echo "go build -race $$x"; \
-		go build -race "$$x" || \
+		echo "go build -race -o bin/ $$x"; \
+		go build -race -o bin/ "$$x" || \
 		exit 1; \
 		echo; \
 	done
