@@ -19,6 +19,7 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
+	"io"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"path"
@@ -82,19 +83,9 @@ func uniq(line string, ignoreCase bool, ignoreWhitespace bool) bool {
 }
 
 func printUniq(filename string, ignoreCase bool, ignoreWhitespace bool) {
-	var line string
 	if filename == "-" {
 		stdin := bufio.NewReader(os.Stdin)
-		scanner := bufio.NewScanner(stdin)
-		for scanner.Scan() {
-			line = scanner.Text()
-			if uniq(line, ignoreCase, ignoreWhitespace) {
-				fmt.Println(line)
-			}
-		}
-		if err := scanner.Err(); err != nil {
-			log.Fatal(err)
-		}
+		process_lines(stdin, ignoreCase, ignoreWhitespace)
 		return
 	}
 
@@ -104,7 +95,12 @@ func printUniq(filename string, ignoreCase bool, ignoreWhitespace bool) {
 		return
 	}
 	defer filehandle.Close()
-	scanner := bufio.NewScanner(filehandle)
+	process_lines(filehandle, ignoreCase, ignoreWhitespace)
+}
+
+func process_lines(reader io.Reader, ignoreCase bool, ignoreWhitespace bool) {
+	var line string
+	scanner := bufio.NewScanner(reader)
 	for scanner.Scan() {
 		line = scanner.Text()
 		if uniq(line, ignoreCase, ignoreWhitespace) {
