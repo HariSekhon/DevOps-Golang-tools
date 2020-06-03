@@ -27,6 +27,8 @@ section "Testing Uniq2"
 
 build uniq2
 
+# $bin defined in tests/utils.sh
+# shellcheck disable=SC2154
 run "$bin/uniq2" < tests/data/uniq.txt
 
 run "$bin/uniq2" tests/data/uniq.txt
