@@ -33,6 +33,6 @@ if ! [ -f /var/log/wtmp ]; then
     $sudo touch /var/log/wtmp || :
 fi
 
-run ./welcome
+run bin/welcome
 
-run ./welcome -q
+run bin/welcome -q
