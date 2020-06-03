@@ -62,13 +62,17 @@ init:
 .PHONY: golang
 golang: golang-version
 	@for x in `sed 's/#.*//' setup/deps.txt`; do \
-		echo "go get -u $$x"; \
-		go get -u "$$x" || \
-		exit 1; \
+		if [ -d "src/$$x" ]; then \
+			echo "dependency found: $$x"; \
+		else \
+			echo "go get -u $$x"; \
+			go get -u "$$x" || \
+			exit 1; \
+		fi; \
 	done; echo
 	@for x in *.go; do \
-		echo "go build $$x"; \
-		go build "$$x" || \
+		echo "go build -race $$x"; \
+		go build -race "$$x" || \
 		exit 1; \
 		echo; \
 	done
