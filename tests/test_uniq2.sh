@@ -29,8 +29,8 @@ run ./uniq2 < tests/data/uniq.txt
 
 run ./uniq2 tests/data/uniq.txt
 
-run ./uniq2 -ignore-case tests/data/uniq.txt
+run ./uniq2 -c tests/data/uniq.txt
 
-run ./uniq2 -ignore-whitespace tests/data/uniq.txt
+run ./uniq2 -w tests/data/uniq.txt
 
-run ./uniq2 -ignore-whitespace -ignore-case tests/data/uniq.txt
+run ./uniq2 -c -w tests/data/uniq.txt
