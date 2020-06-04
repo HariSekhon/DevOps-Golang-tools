@@ -115,7 +115,7 @@ docker run harisekhon/go-tools <program> <args>
 
 #### Automated Build from source #####
 
-installs git, make, pulls the repo and build the dependencies:
+installs git, make, pulls the repo and build the binaries:
 ```
 curl https://raw.githubusercontent.com/HariSekhon/DevOps-Golang-tools/master/setup/bootstrap.sh | sh
 ```
@@ -127,7 +127,11 @@ cd go-tools
 make
 ```
 
-Make sure to read [Detailed Build Instructions](https://github.com/HariSekhon/devops-golang-tools#detailed-build-instructions) further down for more information.
+The `make` command automates building the go binaries which can then be copied around to other systems of the same family, eg. Linux or Mac.
+
+Alternatively there is shebang magic which means each `.go` program can be called directly like a script and it'll runtime compile and execute instantly like a scripted language. This is a neat trick for quick usage and testing built on `go run`, but for frequent use the compiled binaries are usually the way to go.
+
+[Detailed Build Instructions](https://github.com/HariSekhon/devops-golang-tools#detailed-build-instructions) are available further down.
 
 ### Usage ###
 
@@ -138,9 +142,10 @@ Environment variables are supported for convenience and also to hide credentials
 ### DevOps Golang Tools ###
 
 - Linux:
-  - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/harisekhon/devops-python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
-  - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) and [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) repo)
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
+  - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/harisekhon/devops-python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
+  - ```colors.go` - prints a table of terminal colors and their escape codes for doing fancy shell stuff
+  - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) and [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) repos)
 
 ### Detailed Build Instructions
 
