@@ -82,14 +82,14 @@ BG  = Background solid color
 }
 
 func printLine(txtcode int) {
-	var effect_txt string
+	var effectTxt string
 	for _, effect := range effects {
 		if effect == 0 {
-			effect_txt = fmt.Sprintf("%d", txtcode)
+			effectTxt = fmt.Sprintf("%d", txtcode)
 		} else {
-			effect_txt = fmt.Sprintf("%d;%d", effect, txtcode)
+			effectTxt = fmt.Sprintf("%d;%d", effect, txtcode)
 		}
-		fmt.Printf(" %4sm ", effect_txt)
+		fmt.Printf(" %4sm ", effectTxt)
 		fmt.Printf("\033[0m\033[%dm  %s  \033[0m  ", txtcode, text)
 		for bg := 40; bg <= 47; bg++ {
 			fmt.Printf("\033[%d;%dm\033[%dm  %s  \033[0m ", effect, txtcode, bg, text)
