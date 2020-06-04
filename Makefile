@@ -45,7 +45,7 @@ ifndef GOBIN
 	export GOBIN  := $(PWD)/bin
 endif
 
-CODE_FILES := $(shell find . -type f -name '*.go' | grep -v -e bash-tools -e /lib/)
+CODE_FILES := $(shell find . -type f -name '*.go' | grep -v -e bash-tools -e /lib/ -e /src/)
 
 .PHONY: build
 build: init golang-version
