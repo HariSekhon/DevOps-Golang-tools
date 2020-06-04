@@ -138,7 +138,9 @@ Environment variables are supported for convenience and also to hide credentials
 ### DevOps Golang Tools ###
 
 - Linux:
+  - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/harisekhon/devops-python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
   - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) and [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) repo)
+  - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
 
 ### Detailed Build Instructions
 
