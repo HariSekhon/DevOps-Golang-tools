@@ -68,15 +68,6 @@ golang: golang-version
 	@echo "GOPATH = $$GOPATH"
 	@echo "GOBIN  = $$GOBIN"
 	@echo
-	@for x in `sed 's/#.*//' setup/deps.txt`; do \
-		if [ -d "src/$$x" ]; then \
-			echo "dependency found: $$x"; \
-		else \
-			echo "go get -u $$x"; \
-			go get -u "$$x" || \
-			exit 1; \
-		fi; \
-	done; echo
 		@#echo "go build -race -o bin/ $$x"; \
 		@#go build -race -o bin/ "$$x" ||
 	@for x in *.go; do \
