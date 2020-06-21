@@ -119,6 +119,8 @@ install: build
 clean: go-clean
 	@rm -vfr bin bin.darwin.amd64 bin.linux.amd64
 
-#.PHONY: deep-clean
-#deep-clean: clean
-#	cd go-lib && $(MAKE) deep-clean
+.PHONY: deep-clean
+deep-clean: clean
+	@#cd go-lib && $(MAKE) deep-clean
+	@echo "Deep cleaning, removing pkg/*"
+	@rm -fr pkg/*
