@@ -39,7 +39,8 @@ endif
 
 REPO := HariSekhon/DevOps-Golang-tools
 
-export GOPATH := $(PWD)
+# this breaks with go.mod
+#export GOPATH := $(PWD)
 # use default or allow to be overridden by cross-compiling targets (golang-linux, golang-darwin)
 ifndef GOBIN
 	export GOBIN  := $(PWD)/bin
