@@ -11,8 +11,8 @@ Hari Sekhon - DevOps Golang Tools
 [![Code Inspector Grade](https://www.code-inspector.com/project/7517/status/svg)](https://frontend.code-inspector.com/project/7517/dashboard)
 [![Code Inspector Score](https://www.code-inspector.com/project/7517/score/svg)](https://frontend.code-inspector.com/project/7517/dashboard)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/HariSekhon/DevOps-Golang-tools.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HariSekhon/DevOps-Golang-tools/alerts/)
-[![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools)](https://github.com/harisekhon/devops-golang-tools/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools)](https://github.com/harisekhon/devops-golang-tools/network)
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/network)
 
 <!-- doesn't include /tests?/ or comments
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_DevOps-Golang-tools&metric=ncloc)](https://sonarcloud.io/dashboard?id=HariSekhon_DevOps-Golang-tools)
