@@ -4,7 +4,7 @@
 #  Author: Hari Sekhon
 #  Date: 2019-10-16 10:33:03 +0100 (Wed, 16 Oct 2019)
 #
-#  https://github.com/harisekhon/go-tools
+#  https://github.com/harisekhon/devops-golang-tools
 #
 #  License: see accompanying Hari Sekhon LICENSE file
 #
@@ -15,32 +15,41 @@
 
 # Alpine / Wget:
 #
-# wget https://raw.githubusercontent.com/HariSekhon/DevOps-Golang-tools/master/setup/bootstrap.sh && sh bootstrap.sh
+# wget https://raw.githubusercontent.com/HariSekhon/devops-golang-tools/master/setup/bootstrap.sh && sh bootstrap.sh
 #
 # Curl:
 #
-# curl https://raw.githubusercontent.com/HariSekhon/DevOps-Golang-tools/master/setup/bootstrap.sh | sh
+# curl https://raw.githubusercontent.com/HariSekhon/devops-golang-tools/master/setup/bootstrap.sh | sh
 
 set -eu
 [ -n "${DEBUG:-}" ] && set -x
 srcdir="$(dirname "$0")"
 
-repo="https://github.com/HariSekhon/DevOps-Golang-tools"
+repo="https://github.com/HariSekhon/devops-golang-tools"
 
-directory="go-tools"
+directory="golang-tools"
+
+sudo=""
+[ "$(whoami)" = "root" ] || sudo=sudo
 
 if [ "$(uname -s)" = Darwin ]; then
     echo "Bootstrapping Mac"
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
+    if ! type brew >/dev/null 2>&1; then
+        curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | $sudo ruby
+    fi
 elif [ "$(uname -s)" = Linux ]; then
     echo "Bootstrapping Linux"
     if type apk >/dev/null 2>&1; then
-        apk --no-cache add bash git make
+        $sudo apk --no-cache add bash git make curl
     elif type apt-get >/dev/null 2>&1; then
-        apt-get update
-        apt-get install -y git make
+        opts=""
+        if [ -z "${PS1:-}" ]; then
+            opts="-qq"
+        fi
+        $sudo apt-get update $opts
+        $sudo apt-get install $opts -y git make curl
     elif type yum >/dev/null 2>&1; then
-        yum install -y git make
+        $sudo yum install -y git make curl
     else
         echo "Package Manager not found on Linux, cannot bootstrap"
         exit 1
