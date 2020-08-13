@@ -35,7 +35,7 @@ Hari Sekhon - DevOps Golang Tools
 [![MicroBadger](https://images.microbadger.com/badges/image/harisekhon/go-tools.svg)](http://microbadger.com/#/images/harisekhon/go-tools)
 
 [![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue?logo=circleci)](https://bitbucket.org/harisekhon/devops-bash-tools/src/master/STATUS.md)
-[![Jenkins](https://img.shields.io/badge/Jenkins-ready-blue?logo=jenkins)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/Jenkinsfile)
+[![Jenkins](https://img.shields.io/badge/Jenkins-ready-blue?logo=jenkins&logoColor=white)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/Jenkinsfile)
 [![Concourse](https://img.shields.io/badge/Concourse-ready-blue?logo=concourse)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.concourse.yml)
 [![GoCD](https://img.shields.io/badge/GoCD-ready-blue?logo=go)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.gocd.yml)
 
