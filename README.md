@@ -33,7 +33,6 @@ Hari Sekhon - DevOps Golang Tools
 [![DockerHub Build Automated](https://img.shields.io/docker/automated/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/)
 [![Docker Build Status](https://img.shields.io/docker/build/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/builds)
 [![MicroBadger](https://images.microbadger.com/badges/image/harisekhon/go-tools.svg)](http://microbadger.com/#/images/harisekhon/go-tools)
-[![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue?logo=circleci)](https://bitbucket.org/harisekhon/devops-bash-tools/src/master/STATUS.md)
 
 [![Travis CI](https://img.shields.io/travis/harisekhon/DevOps-Golang-tools/master?logo=travis&label=Travis)](https://travis-ci.org/HariSekhon/DevOps-Golang-tools)
 [![AppVeyor](https://img.shields.io/appveyor/build/harisekhon/DevOps-Golang-tools/master?logo=appveyor&label=AppVeyor)](https://ci.appveyor.com/project/HariSekhon/DevOps-Golang-tools/branch/master)
@@ -53,6 +52,7 @@ Hari Sekhon - DevOps Golang Tools
 [![Jenkins](https://img.shields.io/badge/Jenkins-ready-blue?logo=jenkins)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/Jenkinsfile)
 [![Concourse](https://img.shields.io/badge/Concourse-ready-blue?logo=concourse)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.concourse.yml)
 [![GoCD](https://img.shields.io/badge/GoCD-ready-blue?logo=go)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.gocd.yml)
+[![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue?logo=circleci)](https://bitbucket.org/harisekhon/devops-bash-tools/src/master/STATUS.md)
 
 <!--
 [![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status/HariSekhon.DevOps-Golang-tools?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=8&branchName=master)
