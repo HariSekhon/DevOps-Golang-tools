@@ -30,8 +30,8 @@ Hari Sekhon - DevOps Golang Tools
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/DevOps-Golang-tools)
 [![Docker](https://img.shields.io/badge/container-Docker-blue?logo=docker)](https://hub.docker.com/r/harisekhon/github/)
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/harisekhon/centos-github?label=DockerHub%20pulls&logo=docker)](https://hub.docker.com/r/harisekhon/github)
-[![DockerHub Build Automated](https://img.shields.io/docker/automated/harisekhon/go-tools.svg)](https://hub.docker.com/r/harisekhon/go-tools/)
-[![Docker Build Status](https://img.shields.io/docker/build/harisekhon/go-tools.svg)](https://hub.docker.com/r/harisekhon/go-tools/builds)
+[![DockerHub Build Automated](https://img.shields.io/docker/automated/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/)
+[![Docker Build Status](https://img.shields.io/docker/build/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/builds)
 [![MicroBadger](https://images.microbadger.com/badges/image/harisekhon/go-tools.svg)](http://microbadger.com/#/images/harisekhon/go-tools)
 [![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue?logo=circleci)](https://bitbucket.org/harisekhon/devops-bash-tools/src/master/STATUS.md)
 
@@ -43,15 +43,16 @@ Hari Sekhon - DevOps Golang Tools
 [![Codeship Status for HariSekhon/DevOps-Golang-tools](https://app.codeship.com/projects/b281baa0-3c5f-0138-caef-66210e546d42/status?branch=master)](https://app.codeship.com/projects/387251)
 [![Shippable](https://img.shields.io/shippable/5e52c63445c70f0007ff5144/master?label=Shippable&logo=shippable)](https://app.shippable.com/github/HariSekhon/DevOps-Golang-tools/dashboard/jobs)
 [![Codefresh](https://g.codefresh.io/api/badges/pipeline/harisekhon/GitHub%2FDevOps-Golang-tools?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWU1MmM5OGNiM2FiOWUzM2Y3ZDZmYjM3.O69674cW7vYom3v5JOGKXDbYgCVIJU9EWhXUMHl3zwA&type=cf-1)](https://g.codefresh.io/pipelines/edit/new/builds?id=5e58e2e6353f5d1ada385bf2&pipeline=DevOps-Golang-tools&projects=GitHub&projectId=5e52ca8ea284e00f882ea992&context=github&filter=page:1;pageSize:10;timeFrameStart:week)
-[![Wercker](https://app.wercker.com/status/b40735fb89e7d989dbaf5659a9af9a20/s/master "wercker status")](https://app.wercker.com/harisekhon/DevOps-Golang-tools/runs)
 [![BuildKite](https://img.shields.io/buildkite/8377537d0d9dddf4bf32826a6bf1c4e9ab88bc265007e1882c/master?label=BuildKite)](https://buildkite.com/hari-sekhon/devops-golang-tools)
+[![Wercker](https://app.wercker.com/status/b40735fb89e7d989dbaf5659a9af9a20/s/master "wercker status")](https://app.wercker.com/harisekhon/DevOps-Golang-tools/runs)
 [![buddy pipeline](https://app.buddy.works/harisekhon/devops-golang-tools/pipelines/pipeline/246990/badge.svg?token=7f63afa3c423a65e6e39a79be0386959e98c4105ea1e20f7f8b05d6d6b587038 "buddy pipeline")](https://app.buddy.works/harisekhon/devops-golang-tools/pipelines/pipeline/246990)
 -->
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/DevOps-Golang-tools/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/DevOps-Golang-tools)
 [![Semaphore](https://harisekhon.semaphoreci.com/badges/DevOps-Golang-tools.svg)](https://harisekhon.semaphoreci.com/projects/DevOps-Golang-tools)
+
+[![Jenkins](https://img.shields.io/badge/Jenkins-ready-blue?logo=jenkins)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/Jenkinsfile)
 [![Concourse](https://img.shields.io/badge/Concourse-ready-blue?logo=concourse)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.concourse.yml)
 [![GoCD](https://img.shields.io/badge/GoCD-ready-blue?logo=go)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.gocd.yml)
-[![Jenkins](https://img.shields.io/badge/Jenkins-ready-blue?logo=jenkins)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/Jenkinsfile)
 
 <!--
 [![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status/HariSekhon.DevOps-Golang-tools?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=8&branchName=master)
