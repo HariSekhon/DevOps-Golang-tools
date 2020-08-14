@@ -30,9 +30,11 @@ Hari Sekhon - DevOps Golang Tools
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/DevOps-Golang-tools)
 [![Docker](https://img.shields.io/badge/container-Docker-blue?logo=docker)](https://hub.docker.com/r/harisekhon/github/)
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/harisekhon/centos-github?label=DockerHub%20pulls&logo=docker)](https://hub.docker.com/r/harisekhon/github)
+<!-- these badges don't work any more
 [![DockerHub Build Automated](https://img.shields.io/docker/automated/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/)
 [![Docker Build Status](https://img.shields.io/docker/build/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/builds)
 [![MicroBadger](https://images.microbadger.com/badges/image/harisekhon/go-tools.svg)](http://microbadger.com/#/images/harisekhon/go-tools)
+-->
 
 [![CI Builds Overview](https://img.shields.io/badge/CI%20Builds-Overview%20Page-blue?logo=circleci)](https://bitbucket.org/harisekhon/devops-bash-tools/src/master/STATUS.md)
 [![Jenkins](https://img.shields.io/badge/Jenkins-ready-blue?logo=jenkins&logoColor=white)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/Jenkinsfile)
