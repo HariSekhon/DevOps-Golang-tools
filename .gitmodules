@@ -1,3 +1,9 @@
 [submodule "bash-tools"]
 	path = bash-tools
 	url = https://github.com/harisekhon/bash-tools
+[submodule "templates"]
+	path = templates
+	url = https://github.com/HariSekhon/Templates
+[submodule "sql"]
+	path = sql
+	url = https://github.com/HariSekhon/SQL-scripts
