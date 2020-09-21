@@ -125,3 +125,40 @@ deep-clean: clean
 	@#cd go-lib && $(MAKE) deep-clean
 	@echo "Deep cleaning, removing pkg/*"
 	@rm -fr pkg/*
+
+# ============================================================================ #
+#                       I n d i v i d u a l   B u i l d s
+# ============================================================================ #
+
+# Classic Make - individual binaries targets with no-rebuild without clean
+
+.PHONY: all
+all: colors httpfirst uniq2 welcome
+	@:
+
+.PHONY: colors
+colors: bin/colors
+	@:
+bin/colors:
+	go install -race colors.go
+
+
+.PHONY: httpfirst
+httpfirst: bin/httpfirst
+	@:
+bin/httpfirst:
+	go install -race httpfirst.go
+
+
+.PHONY: uniq2
+uniq2: bin/uniq2
+	@:
+bin/uniq2:
+	go install -race uniq2.go
+
+
+.PHONY: welcome
+welcome: bin/welcome
+	@:
+bin/welcome:
+	go install -race welcome.go
