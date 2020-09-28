@@ -55,8 +55,8 @@ build: init
 	@echo =========================
 	@$(MAKE) git-summary
 
-	if [ -z "$(CPANM)" ]; then make; exit $$?; fi
 	@#$(MAKE) system-packages-golang
+	@bash-tools/install_packages.sh go
 
 	$(MAKE) golang
 
