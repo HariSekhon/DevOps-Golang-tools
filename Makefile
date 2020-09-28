@@ -49,7 +49,7 @@ endif
 CODE_FILES := $(shell find . -type f -name '*.go' | grep -v -e bash-tools -e /lib/ -e /src/)
 
 .PHONY: build
-build: init golang-version
+build: init
 	@echo =========================
 	@echo DevOps Golang Tools Build
 	@echo =========================
