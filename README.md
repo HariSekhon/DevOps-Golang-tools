@@ -121,7 +121,7 @@ docker run harisekhon/go-tools <program> <args>
 
 installs git, make, pulls the repo and build the binaries:
 ```
-curl -L git.io/go-bootstrap | sh
+curl -L https://git.io/go-bootstrap | sh
 ```
 
 or manually:
