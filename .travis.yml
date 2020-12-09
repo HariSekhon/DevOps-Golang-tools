@@ -40,6 +40,7 @@ notifications:
 #  only:
 #    - master
 
+# ==============================================
 # https://docs.travis-ci.com/user/job-lifecycle/
 
 # avoid package checksum mismatches when installing packages
