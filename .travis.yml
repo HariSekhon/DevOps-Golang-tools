@@ -54,6 +54,7 @@ notifications:
 cache:
   - pip
   - directories:
+    - $HOME/.cache
     - pkg
     - bash-tools/pytools_checks
 
