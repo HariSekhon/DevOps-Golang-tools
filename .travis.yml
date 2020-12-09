@@ -48,6 +48,13 @@ notifications:
 #  only:
 #    - master
 
+# ========================================
+# https://docs.travis-ci.com/user/caching/
+
+cache:
+  - directories:
+    - bash-tools
+
 # ==============================================
 # https://docs.travis-ci.com/user/job-lifecycle/
 
