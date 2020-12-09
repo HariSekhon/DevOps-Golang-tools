@@ -61,6 +61,7 @@ cache:
     - $HOME/.cpan
     - $HOME/.cpanm
     - $HOME/.gem
+    - $HOME/go/pkg
     - pkg
     - bash-tools/pytools_checks
 
