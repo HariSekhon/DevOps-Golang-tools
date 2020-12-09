@@ -53,7 +53,7 @@ notifications:
 
 cache:
   - directories:
-    - bash-tools
+    - pkg
 
 # ==============================================
 # https://docs.travis-ci.com/user/job-lifecycle/
