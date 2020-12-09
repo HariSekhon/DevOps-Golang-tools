@@ -52,6 +52,7 @@ notifications:
 # https://docs.travis-ci.com/user/caching/
 
 cache:
+  - pip
   - directories:
     - pkg
     - bash-tools/pytools_checks
