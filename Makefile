@@ -56,7 +56,7 @@ build: init
 	@$(MAKE) git-summary
 
 	@#$(MAKE) system-packages-golang
-	@bash-tools/install_packages_if_absent.sh go
+	@bash-tools/install_packages_if_absent.sh golang
 
 	$(MAKE) golang
 
