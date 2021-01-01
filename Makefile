@@ -56,6 +56,8 @@ build: init
 	@$(MAKE) git-summary
 
 	@#$(MAKE) system-packages-golang
+	# provides OS specific build packages for compiling golang modules, such as gcc, and distro specific stdlib packages, build-essential on debian/ubuntu etc
+	$(MAKE) system-packages
 	@bash-tools/install_packages_if_absent.sh golang
 
 	$(MAKE) golang
@@ -66,19 +68,7 @@ init:
 
 .PHONY: golang
 golang: golang-version
-	@echo "GOPATH = $$GOPATH"
-	@echo "GOBIN  = $$GOBIN"
-	# for older versions of Go that don't support 'go mod'
-	go help mod || { awk '/require/{gsub("v", "", $$3); print $$2}' go.mod | xargs -L 1 go get; }
-	@echo
-#		@echo "go build -race -o bin/ $$x"; \
-#		@go build -race -o bin/ "$$x" ||
-	@for x in *.go; do \
-		echo "go install -race $$x"; \
-		go install -race "$$x" || \
-		exit 1; \
-		echo; \
-	done
+	./compile.sh
 	@echo 'BUILD SUCCESSFUL (go-tools)'
 
 .PHONY: golang-mac
