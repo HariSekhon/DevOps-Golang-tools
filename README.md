@@ -50,9 +50,6 @@ Hari Sekhon - DevOps Golang Tools
 [![Codefresh](https://g.codefresh.io/api/badges/pipeline/harisekhon/GitHub%2FDevOps-Golang-tools?key=eyJhbGciOiJIUzI1NiJ9.NWU1MmM5OGNiM2FiOWUzM2Y3ZDZmYjM3.O69674cW7vYom3v5JOGKXDbYgCVIJU9EWhXUMHl3zwA&date=1609528430541)](https://g.codefresh.io/pipelines/edit/new/builds?id=5fef73e62e168ebc6dd24d07&pipeline=DevOps-Golang-tools&projects=GitHub&projectId=5fef73e62e168ebc6dd24d07&context=github&filter=page:1;pageSize:10;timeFrameStart:week)
 [![BuildKite](https://img.shields.io/buildkite/e2deddfa45087ac7984c456cb93319ef434ac996c7c1006833/master?label=BuildKite&logo=buildkite)](https://buildkite.com/hari-sekhon/devops-golang-tools)
 [![Wercker](https://app.wercker.com/status/0a1cc64a81b6e218ea4f662341aea1cc/s/master "wercker status")](https://app.wercker.com/harisekhon/DevOps-Golang-tools/runs)
-<!--
-[![buddy pipeline](https://app.buddy.works/harisekhon/devops-golang-tools/pipelines/pipeline/246990/badge.svg?token=7f63afa3c423a65e6e39a79be0386959e98c4105ea1e20f7f8b05d6d6b587038 "buddy pipeline")](https://app.buddy.works/harisekhon/devops-golang-tools/pipelines/pipeline/246990)
--->
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/DevOps-Golang-tools/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/DevOps-Golang-tools)
 [![Semaphore](https://harisekhon.semaphoreci.com/badges/DevOps-Golang-tools.svg)](https://harisekhon.semaphoreci.com/projects/DevOps-Golang-tools)
 
