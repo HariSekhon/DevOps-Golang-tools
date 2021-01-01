@@ -91,7 +91,7 @@ A few of the Cloud, Big Data, NoSQL & Linux tools I've written over the years.
 
 All programs have `--help` to list the available options.
 
-For many more tools see the [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools), [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) and [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) repos which contains many Hadoop, NoSQL, Web and infrastructure tools and Nagios plugins.
+For many more tools see the [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools), [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools), [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) and [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
 
 Hari Sekhon
 
