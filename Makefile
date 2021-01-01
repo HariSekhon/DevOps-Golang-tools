@@ -68,6 +68,8 @@ init:
 golang: golang-version
 	@echo "GOPATH = $$GOPATH"
 	@echo "GOBIN  = $$GOBIN"
+	# for older versions of Go that don't support 'go mod'
+	go help mod || { awk '/require/{gsub("v", "", $$3); print $$2}' go.mod | xargs -L 1 go get; }
 	@echo
 #		@echo "go build -race -o bin/ $$x"; \
 #		@go build -race -o bin/ "$$x" ||
