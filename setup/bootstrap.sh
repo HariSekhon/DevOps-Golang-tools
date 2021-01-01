@@ -27,7 +27,7 @@ srcdir="$(dirname "$0")"
 
 repo="https://github.com/HariSekhon/devops-golang-tools"
 
-directory="golang-tools"
+directory="go-tools"
 
 sudo=""
 [ "$(whoami)" = "root" ] || sudo=sudo
