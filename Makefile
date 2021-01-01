@@ -69,8 +69,8 @@ golang: golang-version
 	@echo "GOPATH = $$GOPATH"
 	@echo "GOBIN  = $$GOBIN"
 	@echo
-		@#echo "go build -race -o bin/ $$x"; \
-		@#go build -race -o bin/ "$$x" ||
+#		@echo "go build -race -o bin/ $$x"; \
+#		@go build -race -o bin/ "$$x" ||
 	@for x in *.go; do \
 		echo "go install -race $$x"; \
 		go install -race "$$x" || \
