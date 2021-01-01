@@ -37,8 +37,8 @@ help_usage "$@"
 
 cd "$srcdir"
 
-echo "GOPATH = $GOPATH"
-echo "GOBIN  = $GOBIN"
+echo "GOPATH = ${GOPATH:-}"
+echo "GOBIN  = ${GOBIN:-}"
 echo
 
 # for older versions of Go that don't support 'go mod'
