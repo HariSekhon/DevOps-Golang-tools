@@ -37,6 +37,8 @@ help_usage "$@"
 
 cd "$srcdir"
 
+# must not be a directory with go.mod
+export GOPATH=~/go
 export GOBIN="${GOBIN:-$PWD/bin}"
 
 echo "GOPATH = ${GOPATH:-}"
