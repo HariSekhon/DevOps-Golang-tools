@@ -105,10 +105,10 @@ All programs have `--help` to list the available options.
 
 See Also:
 
-- [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools)
-- [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools)
-- [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools)
-- [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins)
+  - [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools)
+  - [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools)
+  - [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools)
+  - [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins)
 
 repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
 
