@@ -95,7 +95,7 @@ Hari Sekhon - DevOps Golang Tools
 
 [git.io/go-tools](https://git.io/go-tools)
 
-## DevOps Golang Tools ###
+## DevOps Golang Tools
 
 <!--
 A few of the Cloud, Big Data, NoSQL & Linux tools I've written over the years.
@@ -108,7 +108,7 @@ See Also:
 - [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools)
 - [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools)
 - [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools)
-- [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) 
+- [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins)
 
 repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
 
@@ -162,7 +162,7 @@ All programs come with a ```--help``` switch which includes a program descriptio
 
 Environment variables are supported for convenience and also to hide credentials from being exposed in the process list eg. ```$PASSWORD```, ```$TRAVIS_TOKEN```. These are indicated in the ```--help``` descriptions in brackets next to each option and often have more specific overrides with higher precedence eg. ```$AMBARI_HOST```, ```$HBASE_HOST``` take priority over ```$HOST```.
 
-### DevOps Golang Tools
+### DevOps Golang Tools - Inventory:
 
 - Linux:
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
