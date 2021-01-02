@@ -57,12 +57,17 @@ if ! go help mod &>/dev/null; then
     echo
 fi
 
+opts=()
+# race detector doesn't work with musl on Alpine
+if ! grep -qi Alpine /etc/*release &>/dev/null; then
+    opts+=(-race)
+fi
 
 for x in *.go; do
     #echo "go build -race -o bin/ $x";
     #go build -race -o bin/ "$x" ||
-    echo "go install -race $x";
-    go install -race "$x"
+    echo "go install ${opts[*]} $x";
+    go install "${opts[@]}" "$x"
     echo
 done
 echo "Compile successful"
