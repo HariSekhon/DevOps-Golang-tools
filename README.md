@@ -210,7 +210,6 @@ If you update often and want to just quickly git pull + submodule update but ski
 ### Testing
 
 [Continuous Integration](https://travis-ci.org/HariSekhon/devops-golang-tools) is run on this repo with tests for success and failure scenarios:
-- unit tests for the custom supporting [golang library](https://github.com/harisekhon/pylib)
 - integration tests of the top level programs using the libraries for things like option parsing
 - [functional tests](https://github.com/HariSekhon/devops-golang-tools/tree/master/tests) for the top level programs using local test data and [Docker containers](https://hub.docker.com/u/harisekhon/)
 
