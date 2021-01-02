@@ -71,6 +71,10 @@ golang: golang-version
 	./compile.sh
 	@echo 'BUILD SUCCESSFUL (go-tools)'
 
+.PHONY: go
+go: golang
+	@:
+
 .PHONY: golang-mac
 golang-mac: golang-darwin
 	@:
