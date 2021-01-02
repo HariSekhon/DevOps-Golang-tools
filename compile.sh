@@ -70,4 +70,4 @@ for x in *.go; do
     go install "${opts[@]}" "$x"
     echo
 done
-echo "Compile successful"
+echo "Golang compile succeeded"
