@@ -53,7 +53,7 @@ Hari Sekhon - DevOps Golang Tools
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/DevOps-Golang-tools/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/DevOps-Golang-tools)
 [![Semaphore](https://harisekhon.semaphoreci.com/badges/DevOps-Golang-tools.svg)](https://harisekhon.semaphoreci.com/projects/DevOps-Golang-tools)
 
-[![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status/HariSekhon.DevOps-Golang-tools?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=13&branchName=master)
+[![Azure DevOps Pipeline](https://dev.azure.com/harisekhon/GitHub/_apis/build/status/DevOps-Golang-tools?branchName=master)](https://dev.azure.com/harisekhon/GitHub/_build/latest?definitionId=13&branchName=master)
 [![BitBucket Pipeline](https://img.shields.io/bitbucket/pipelines/harisekhon/devops-golang-tools/master?logo=bitbucket&label=BitBucket%20CI)](https://bitbucket.org/harisekhon/devops-golang-tools/addon/pipelines/home#!/)
 [![GitLab Pipeline](https://img.shields.io/gitlab/pipeline/harisekhon/DevOps-Golang-tools?logo=gitlab&label=GitLab%20CI)](https://gitlab.com/HariSekhon/DevOps-Golang-tools/pipelines)
 [![AWS CodeBuild](https://img.shields.io/badge/AWS%20CodeBuild-ready-blue?logo=amazon%20aws)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/buildspec.yml)
