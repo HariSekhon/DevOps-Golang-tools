@@ -245,8 +245,6 @@ Patches, improvements and even general feedback are welcome in the form of GitHu
 
 * [Dockerfiles](https://github.com/HariSekhon/Dockerfiles) - 50+ DockerHub public images for Docker & Kubernetes - Hadoop, Kafka, ZooKeeper, HBase, Cassandra, Solr, SolrCloud, Presto, Apache Drill, Nifi, Spark, Mesos, Consul, Riak, OpenTSDB, Jython, Advanced Nagios Plugins & DevOps Tools repos on Alpine, CentOS, Debian, Fedora, Ubuntu, Superset, H2O, Serf, Alluxio / Tachyon, FakeS3
 
-* [Go-Lib](https://github.com/harisekhon/go-lib) - Golang library leveraged throughout the programs in this repo as a submodule
-
 * [PyLib](https://github.com/harisekhon/pylib) - Python library
 
 * [Perl Lib](https://github.com/harisekhon/lib) - Perl library
