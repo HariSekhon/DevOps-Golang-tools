@@ -95,7 +95,7 @@ Hari Sekhon - DevOps Golang Tools
 
 [git.io/go-tools](https://git.io/go-tools)
 
-### DevOps Golang Tools ###
+## DevOps Golang Tools ###
 
 <!--
 A few of the Cloud, Big Data, NoSQL & Linux tools I've written over the years.
@@ -103,7 +103,14 @@ A few of the Cloud, Big Data, NoSQL & Linux tools I've written over the years.
 
 All programs have `--help` to list the available options.
 
-For many more tools see the [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools), [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools), [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) and [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
+See Also:
+
+- [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools)
+- [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools)
+- [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools)
+- [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) 
+
+repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
 
 Hari Sekhon
 
@@ -114,9 +121,9 @@ Cloud & Big Data Contractor, United Kingdom
 
 ##### Make sure you run ```make update``` if updating and not just ```git pull``` as you will often need the latest library submodule and possibly new upstream libraries. #####
 
-### Quick Start ###
+## Quick Start
 
-#### Ready to run Docker image #####
+### Ready to run Docker image
 
 All programs and their pre-compiled dependencies can be found ready to run on [DockerHub](https://hub.docker.com/r/harisekhon/go-tools/).
 
@@ -129,7 +136,7 @@ Run any given program:
 docker run harisekhon/go-tools <program> <args>
 ```
 
-#### Automated Build from source #####
+### Automated Build from source
 
 installs git, make, pulls the repo and build the binaries:
 ```
@@ -149,13 +156,13 @@ Alternatively there is shebang magic which means each `.go` program can be calle
 
 [Detailed Build Instructions](https://github.com/HariSekhon/devops-golang-tools#detailed-build-instructions) are available further down.
 
-### Usage ###
+### Usage
 
 All programs come with a ```--help``` switch which includes a program description and the list of command line options.
 
 Environment variables are supported for convenience and also to hide credentials from being exposed in the process list eg. ```$PASSWORD```, ```$TRAVIS_TOKEN```. These are indicated in the ```--help``` descriptions in brackets next to each option and often have more specific overrides with higher precedence eg. ```$AMBARI_HOST```, ```$HBASE_HOST``` take priority over ```$HOST```.
 
-### DevOps Golang Tools ###
+### DevOps Golang Tools
 
 - Linux:
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
