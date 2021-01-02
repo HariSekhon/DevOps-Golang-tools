@@ -83,6 +83,15 @@ Hari Sekhon - DevOps Golang Tools
 [![Alpine](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Alpine/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Alpine%22)
 [![Alpine 3](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Alpine%203/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Alpine+3%22)
 
+[![Golang latest](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%20latest/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+latest%22)
+[![Golang 1.9](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.9/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.9%22)
+[![Golang 1.10](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.10/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.10%22)
+[![Golang 1.11](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.11/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.11%22)
+[![Golang 1.12](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.12/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.12%22)
+[![Golang 1.13](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.13/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.13%22)
+[![Golang 1.14](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.14/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.14%22)
+[![Golang 1.15](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Golang%201.15/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Golang+1.15%22)
+
 ### DevOps Golang Tools ###
 
 <!--
