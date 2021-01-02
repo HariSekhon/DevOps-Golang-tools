@@ -41,8 +41,14 @@ cd "$srcdir"
 export GOPATH=~/go
 export GOBIN="${GOBIN:-$PWD/bin}"
 
+echo "go env:"
+echo
+go env
+echo
+echo
 echo "GOPATH = ${GOPATH:-}"
 echo "GOBIN  = ${GOBIN:-}"
+echo
 echo
 
 # for older versions of Go that don't support 'go mod'
