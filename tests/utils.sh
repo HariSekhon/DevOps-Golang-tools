@@ -30,7 +30,7 @@ export COMPOSE_PROJECT_NAME="go-tools"
 . "$srcdir/excluded.sh"
 
 #export GOBIN="$srcdir/../bin"
-bin="bin"
+bin="${GOBIN:-$srcdir/../bin}"
 
 if [ "$(uname -s)" = Darwin ]; then
     readlink(){ greadlink "$@"; }
