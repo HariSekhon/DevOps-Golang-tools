@@ -41,13 +41,23 @@ cd "$srcdir"
 export GOPATH=~/go
 export GOBIN="${GOBIN:-$PWD/bin}"
 
+echo
 echo "go env:"
 echo
 go env
 echo
-echo
 echo "GOPATH = ${GOPATH:-}"
 echo "GOBIN  = ${GOBIN:-}"
+echo
+which go
+if is_mac; then
+    readlink(){
+        greadlink "$@"
+    }
+fi
+ls -l "$(readlink -f "$(which go)")"
+echo
+go version
 echo
 echo
 
