@@ -52,9 +52,9 @@ if ! go help mod &>/dev/null; then
     echo
 #else
     # golang 1.11.13 seems to fail, try to download deps explicitly
-    #echo "go mod download"
-    #go mod download
-    #echo
+    echo "go mod download"
+    go mod download
+    echo
 fi
 
 
