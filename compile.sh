@@ -37,6 +37,8 @@ help_usage "$@"
 
 cd "$srcdir"
 
+export GOBIN="${GOBIN:-$PWD/bin}"
+
 echo "GOPATH = ${GOPATH:-}"
 echo "GOBIN  = ${GOBIN:-}"
 echo
@@ -45,6 +47,11 @@ echo
 if ! go help mod &>/dev/null; then
     awk '/require/{gsub("v", "", $3); print $2}' go.mod |
     xargs -L 1 go get
+    echo
+else
+    # golang 1.11.13 seems to fail, try to download deps explicitly
+    echo "go mod download"
+    go mod download
     echo
 fi
 
