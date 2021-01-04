@@ -49,6 +49,26 @@ if ! is_golang_min_version 1.9; then
     export GOROOT="$HOME/bin/go"
 fi
 
+if is_mac; then
+    readlink(){
+        greadlink "$@"
+    }
+fi
+
+readlink_go="$(readlink -f "$(command -v go)")"
+
+# fix for GitHub Actions Ubuntu latest which has broken environment:
+#
+#   GOROOT="/opt/hostedtoolcache/go/1.14.13/x64"
+#
+# but first in $PATH:
+#
+#   /usr/bin/go -> /usr/lib/go-1.10/bin/go
+#
+if [[ "$readlink_go" =~ /go-.+/bin/go$ ]]; then
+    export GOROOT="${readlink_go%/bin/go}"
+fi
+
 echo
 echo "go env:"
 echo
@@ -57,13 +77,10 @@ echo
 echo "GOPATH = ${GOPATH:-}"
 echo "GOBIN  = ${GOBIN:-}"
 echo
-which go
-if is_mac; then
-    readlink(){
-        greadlink "$@"
-    }
-fi
-ls -l "$(readlink -f "$(which go)")"
+# which is better than command -v, ensure executable
+# shellcheck disable=SC2230
+command -v go
+ls -l "$readlink_go"
 echo
 go version
 echo
