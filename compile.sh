@@ -41,6 +41,14 @@ cd "$srcdir"
 export GOPATH=~/go
 export GOBIN="${GOBIN:-$PWD/bin}"
 
+if ! is_golang_min_version 1.9; then
+    echo "Golang version is < 1.9, downloading newer version"
+    echo
+    "$srcdir/bash-tools/setup/install_golang.sh"
+    export PATH="$HOME/bin/go/bin:$PATH"
+    export GOROOT="$HOME/bin/go"
+fi
+
 echo
 echo "go env:"
 echo
