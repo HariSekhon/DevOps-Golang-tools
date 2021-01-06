@@ -28,12 +28,12 @@ Hari Sekhon - DevOps Golang Tools
 
 [![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)](https://github.com/HariSekhon/DevOps-Golang-tools)
 [![Mac](https://img.shields.io/badge/OS-Mac-blue?logo=apple)](https://github.com/HariSekhon/DevOps-Golang-tools)
-[![Docker](https://img.shields.io/badge/container-Docker-blue?logo=docker)](https://hub.docker.com/r/harisekhon/github/)
-[![Dockerfile](https://img.shields.io/badge/repo-Dockerfiles-blue?logo=docker)](https://github.com/HariSekhon/Dockerfiles)
-[![DockerHub Pulls](https://img.shields.io/docker/pulls/harisekhon/centos-github?label=DockerHub%20pulls&logo=docker)](https://hub.docker.com/r/harisekhon/github)
+[![Docker](https://img.shields.io/badge/container-Docker-blue?logo=docker&logoColor=white)](https://hub.docker.com/r/harisekhon/github/)
+[![Dockerfile](https://img.shields.io/badge/repo-Dockerfiles-blue?logo=docker&logoColor=white)](https://github.com/HariSekhon/Dockerfiles)
+[![DockerHub Pulls](https://img.shields.io/docker/pulls/harisekhon/centos-github?label=DockerHub%20pulls&logo=docker&logoColor=white)](https://hub.docker.com/r/harisekhon/github)
 <!-- these badges don't work any more
-[![DockerHub Build Automated](https://img.shields.io/docker/automated/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/)
-[![Docker Build Status](https://img.shields.io/docker/build/harisekhon/go-tools?logo=docker)](https://hub.docker.com/r/harisekhon/go-tools/builds)
+[![DockerHub Build Automated](https://img.shields.io/docker/automated/harisekhon/go-tools?logo=docker&logoColor=white)](https://hub.docker.com/r/harisekhon/go-tools/)
+[![Docker Build Status](https://img.shields.io/docker/build/harisekhon/go-tools?logo=docker&logoColor=white)](https://hub.docker.com/r/harisekhon/go-tools/builds)
 [![MicroBadger](https://images.microbadger.com/badges/image/harisekhon/go-tools.svg)](http://microbadger.com/#/images/harisekhon/go-tools)
 -->
 
