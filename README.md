@@ -170,7 +170,7 @@ Environment variables are supported for convenience and also to hide credentials
 - Linux:
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
   - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/harisekhon/devops-python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
-  - ```colors.go` - prints a table of terminal colors and their escape codes for doing fancy shell stuff
+  - ```colors.go``` - prints a table of terminal colors and their escape codes for doing fancy shell stuff
   - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) and [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) repos)
 
 ### Detailed Build Instructions
@@ -227,7 +227,6 @@ Strict validations include host/domain/FQDNs using TLDs which are populated from
 
 Run ```make update```. This will git pull and then git submodule update which is necessary to pick up corresponding library updates.
 
-If you update often and want to just quickly git pull + submodule update but skip rebuilding all those dependencies each time then run ```make update-no-recompile``` (will miss new library dependencies - do full ```make update``` if you encounter issues).
 
 ### Testing
 
