@@ -131,7 +131,7 @@ deep-clean: clean
 # Magic to create dynamic targets
 %.go:
 	go install -race $@
-bin/%: ./%.go
+bin/%: %.go
 	go install -race $<
 
 %: %.go
