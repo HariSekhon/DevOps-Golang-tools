@@ -136,12 +136,7 @@ deep-clean: clean
 	@$(MAKE) $<
 # :: means terminal - don't call implicit %.go target, just require the file exists in order for this dynamic target
 bin/%:: %.go
-	@if [ -f $< ]; then \
-		go install -race $<; \
-	else \
-		echo "ERROR: $< not found"; \
-		exit 1; \
-	fi
+	go install -race $<
 
 
 .PHONY: all
