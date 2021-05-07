@@ -129,7 +129,7 @@ deep-clean: clean
 # Classic Make - individual binaries targets with no-rebuild without clean
 
 # Magic to create dynamic targets
-%: %.go
+%: bin/%
 	@:
 # :: means terminal - don't call implicit bin/% target, just check if file exists on disk or run otherwise
 %.go:: bin/%
