@@ -131,15 +131,13 @@ deep-clean: clean
 # Magic to create dynamic targets
 %: bin/%
 	@:
-%.go:
-	@if [ -f $@ ]; then \
-		go install -race $@; \
+bin/%: %.go
+	@if [ -f $< ]; then \
+		go install -race $<; \
 	else \
 		echo "ERROR: $@ not found"; \
 		exit 1; \
 	fi
-bin/%: %.go
-	go install -race $<
 
 
 .PHONY: all
