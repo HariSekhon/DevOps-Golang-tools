@@ -129,9 +129,11 @@ deep-clean: clean
 # Classic Make - individual binaries targets with no-rebuild without clean
 
 # Magic to create dynamic targets
-%: bin/%
+%: %.go
 	@:
-bin/%: %.go
+%.go:: bin/%
+	@$(MAKE) $<
+bin/%:: %.go
 	@if [ -f $< ]; then \
 		go install -race $<; \
 	else \
