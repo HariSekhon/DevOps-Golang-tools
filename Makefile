@@ -129,13 +129,13 @@ deep-clean: clean
 # Classic Make - individual binaries targets with no-rebuild without clean
 
 # Magic to create dynamic targets
+%: %.go
+	@$(MAKE) $@.go
 %.go:
 	go install -race $@
 bin/%: %.go
 	go install -race $<
 
-%: %.go
-	@$(MAKE) $@.go
 
 .PHONY: all
 all: colors httpfirst uniq2 welcome
