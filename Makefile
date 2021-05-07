@@ -131,8 +131,10 @@ deep-clean: clean
 # Magic to create dynamic targets
 %: %.go
 	@:
+	# :: means terminal - don't call implicit bin/% target, just check if it exists or run otherwise
 %.go:: bin/%
 	@$(MAKE) $<
+# :: means terminal - don't call implicit %.go target, just require the file exists in order for this dynamic target
 bin/%:: %.go
 	@if [ -f $< ]; then \
 		go install -race $<; \
