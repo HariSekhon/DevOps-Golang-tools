@@ -128,33 +128,15 @@ deep-clean: clean
 
 # Classic Make - individual binaries targets with no-rebuild without clean
 
+# Magic to create dynamic targets
+%.go:
+	go install -race $@
+bin/%: ./%.go
+	go install -race $<
+
+%: %.go
+	@$(MAKE) $@.go
+
 .PHONY: all
 all: colors httpfirst uniq2 welcome
 	@:
-
-.PHONY: colors
-colors: bin/colors
-	@:
-bin/colors:
-	go install -race colors.go
-
-
-.PHONY: httpfirst
-httpfirst: bin/httpfirst
-	@:
-bin/httpfirst:
-	go install -race httpfirst.go
-
-
-.PHONY: uniq2
-uniq2: bin/uniq2
-	@:
-bin/uniq2:
-	go install -race uniq2.go
-
-
-.PHONY: welcome
-welcome: bin/welcome
-	@:
-bin/welcome:
-	go install -race welcome.go
