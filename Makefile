@@ -135,7 +135,7 @@ bin/%: %.go
 	@if [ -f $< ]; then \
 		go install -race $<; \
 	else \
-		echo "ERROR: $@ not found"; \
+		echo "ERROR: $< not found"; \
 		exit 1; \
 	fi
 
