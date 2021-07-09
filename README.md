@@ -43,7 +43,7 @@ Hari Sekhon - DevOps Golang Tools
 [![GoCD](https://img.shields.io/badge/GoCD-ready-blue?logo=go)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.gocd.yml)
 [![TeamCity](https://img.shields.io/badge/TeamCity-ready-blue?logo=teamcity)](https://github.com/HariSekhon/TeamCity-CI)
 
-[![Travis CI](https://img.shields.io/travis/harisekhon/DevOps-Golang-tools/master?logo=travis&label=Travis%20CI)](https://travis-ci.org/HariSekhon/DevOps-Golang-tools)
+[![Travis CI](https://img.shields.io/badge/TravisCI-legacy-lightgrey?logo=travis&label=Travis%20CI)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/.travis.yml)
 [![AppVeyor](https://img.shields.io/appveyor/build/harisekhon/DevOps-Golang-tools/master?logo=appveyor&label=AppVeyor)](https://ci.appveyor.com/project/HariSekhon/DevOps-Golang-tools/branch/master)
 [![Drone](https://img.shields.io/drone/build/HariSekhon/DevOps-Golang-tools/master?logo=drone&label=Drone)](https://cloud.drone.io/HariSekhon/DevOps-Golang-tools)
 [![CircleCI](https://circleci.com/gh/HariSekhon/DevOps-Golang-tools.svg?style=svg)](https://circleci.com/gh/HariSekhon/DevOps-Golang-tools)
