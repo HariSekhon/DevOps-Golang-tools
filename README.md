@@ -1,7 +1,7 @@
 Hari Sekhon - DevOps Golang Tools
 =================================
 
-[![Codacy](https://api.codacy.com/project/badge/Grade/f7af72140c3b408b9659207ced17544f)](https://www.codacy.com/app/harisekhon/devops-golang-tools)
+[![Codacy](https://app.codacy.com/project/badge/Grade/7b64fbfcff2240b9b18c6754c22d39bb)](https://www.codacy.com/gh/HariSekhon/DevOps-Golang-tools/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/harisekhon/DevOps-Golang-tools/badge)](https://www.codefactor.io/repository/github/harisekhon/DevOps-Golang-tools)
 [![Language grade: Golang](https://img.shields.io/lgtm/grade/golang/g/HariSekhon/DevOps-Golang-tools.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HariSekhon/DevOps-Golang-tools/context:golang)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_DevOps-Golang-tools&metric=alert_status)](https://sonarcloud.io/dashboard?id=HariSekhon_DevOps-Golang-tools)
