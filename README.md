@@ -165,7 +165,7 @@ All programs come with a ```--help``` switch which includes a program descriptio
 
 Environment variables are supported for convenience and also to hide credentials from being exposed in the process list eg. ```$PASSWORD```, ```$TRAVIS_TOKEN```. These are indicated in the ```--help``` descriptions in brackets next to each option and often have more specific overrides with higher precedence eg. ```$AMBARI_HOST```, ```$HBASE_HOST``` take priority over ```$HOST```.
 
-### DevOps Golang Tools - Inventory:
+### DevOps Golang Tools - Inventory
 
 - Linux:
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
