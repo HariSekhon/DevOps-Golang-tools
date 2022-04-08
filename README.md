@@ -1,6 +1,16 @@
 Hari Sekhon - DevOps Golang Tools
 =================================
 
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/network)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/HariSekhon/DevOps-Golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/commits/master)
+[![License](https://img.shields.io/github/license/HariSekhon/DevOps-Golang-tools)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/LICENSE)
+<!-- doesn't include /tests?/ or comments
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_DevOps-Golang-tools&metric=ncloc)](https://sonarcloud.io/dashboard?id=HariSekhon_DevOps-Golang-tools)
+
+[![Lines of Code](https://img.shields.io/badge/lines%20of%20code-26k-lightgrey)](https://github.com/HariSekhon/DevOps-Golang-tools)
+-->
+
 [![Codacy](https://app.codacy.com/project/badge/Grade/7b64fbfcff2240b9b18c6754c22d39bb)](https://www.codacy.com/gh/HariSekhon/DevOps-Golang-tools/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/harisekhon/DevOps-Golang-tools/badge)](https://www.codefactor.io/repository/github/harisekhon/DevOps-Golang-tools)
 [![Language grade: Golang](https://img.shields.io/lgtm/grade/golang/g/HariSekhon/DevOps-Golang-tools.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HariSekhon/DevOps-Golang-tools/context:golang)
@@ -11,16 +21,6 @@ Hari Sekhon - DevOps Golang Tools
 [![Codiga Grade](https://api.codiga.io/project/7517/status/svg)](https://app.codiga.io/project/7517/dashboard)
 [![Codiga Score](https://api.codiga.io/project/7517/score/svg)](https://app.codiga.io/project/7517/dashboard)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/HariSekhon/DevOps-Golang-tools.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HariSekhon/DevOps-Golang-tools/alerts/)
-[![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/network)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/HariSekhon/DevOps-Golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/commits/master)
-[![License](https://img.shields.io/github/license/HariSekhon/DevOps-Golang-tools)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/LICENSE)
-
-<!-- doesn't include /tests?/ or comments
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_DevOps-Golang-tools&metric=ncloc)](https://sonarcloud.io/dashboard?id=HariSekhon_DevOps-Golang-tools)
-
-[![Lines of Code](https://img.shields.io/badge/lines%20of%20code-26k-lightgrey)](https://github.com/HariSekhon/DevOps-Golang-tools)
--->
 
 <!-- site broken
 [![PyUp](https://pyup.io/repos/github/HariSekhon/DevOps-Golang-tools/shield.svg)](https://pyup.io/account/repos/github/HariSekhon/DevOps-Golang-tools/)
