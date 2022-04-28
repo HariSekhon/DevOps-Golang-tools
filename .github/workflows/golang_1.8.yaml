@@ -55,5 +55,5 @@ jobs:
     uses: HariSekhon/GitHub-Actions/.github/workflows/make.yaml@master
     with:
       container: golang:1.8
-      caches: golang
+      caches: apt golang
       debug: ${{ github.event.inputs.debug }}
