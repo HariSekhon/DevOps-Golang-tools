@@ -1,8 +1,8 @@
 Hari Sekhon - DevOps Golang Tools
 =================================
 
-[![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/harisekhon/devops-golang-tools/network)
+[![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/network)
 [![License](https://img.shields.io/github/license/HariSekhon/DevOps-Golang-tools)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/LICENSE)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/HariSekhon/DevOps-Golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/commits/master)
 <!-- doesn't include /tests?/ or comments
@@ -112,10 +112,10 @@ All programs have `--help` to list the available options.
 
 See Also:
 
-  - [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools)
-  - [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools)
-  - [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools)
-  - [Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins)
+  - [DevOps Bash Tools](https://github.com/HariSekhon/DevOps-Bash-tools)
+  - [DevOps Python Tools](https://github.com/HariSekhon/DevOps-Python-tools)
+  - [DevOps Perl Tools](https://github.com/HariSekhon/DevOps-Perl-tools)
+  - [Advanced Nagios Plugins Collection](https://github.com/HariSekhon/Nagios-Plugins)
 
 repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
 
@@ -123,7 +123,7 @@ Hari Sekhon
 
 Cloud & Big Data Contractor, United Kingdom
 
-[https://www.linkedin.com/in/harisekhon](https://www.linkedin.com/in/harisekhon)
+[https://www.linkedin.com/in/HariSekhon](https://www.linkedin.com/in/HariSekhon)
 ###### (you're welcome to connect with me on LinkedIn)
 
 ##### Make sure you run ```make update``` if updating and not just ```git pull``` as you will often need the latest library submodule and possibly new upstream libraries #####
@@ -152,7 +152,7 @@ curl -L https://git.io/go-bootstrap | sh
 
 or manually:
 ```
-git clone https://github.com/harisekhon/devops-golang-tools go-tools
+git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools
 cd go-tools
 make
 ```
@@ -161,7 +161,7 @@ The `make` command automates building the go binaries which can then be copied a
 
 Alternatively there is shebang magic which means each `.go` program can be called directly like a script and it'll runtime compile and execute instantly like a scripted language. This is a neat trick for quick usage and testing built on `go run`, but for frequent use the compiled binaries are usually the way to go.
 
-[Detailed Build Instructions](https://github.com/HariSekhon/devops-golang-tools#detailed-build-instructions) are available further down.
+[Detailed Build Instructions](https://github.com/HariSekhon/DevOps-Golang-tools#detailed-build-instructions) are available further down.
 
 ### Usage
 
@@ -173,9 +173,9 @@ Environment variables are supported for convenience and also to hide credentials
 
 - Linux:
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
-  - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/harisekhon/devops-python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
+  - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/HariSekhon/DevOps-Python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
   - ```colors.go``` - prints a table of terminal colors and their escape codes for doing fancy shell stuff
-  - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) and [DevOps Perl Tools](https://github.com/harisekhon/devops-perl-tools) repos)
+  - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/HariSekhon/DevOps-Python-tools) and [DevOps Perl Tools](https://github.com/HariSekhon/DevOps-Perl-tools) repos)
 
 ### Detailed Build Instructions
 
@@ -184,7 +184,7 @@ Environment variables are supported for convenience and also to hide credentials
 Enter the go-tools directory and run git submodule init and git submodule update to fetch my library repo:
 
 ```
-git clone https://github.com/harisekhon/devops-golang-tools go-tools
+git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools
 cd go-tools
 git submodule init
 git submodule update
@@ -196,7 +196,7 @@ go build
 
 Download the DevOps Golang Tools and Go-lib git repos as zip files:
 
-https://github.com/HariSekhon/devops-golang-tools/archive/master.zip
+https://github.com/HariSekhon/DevOps-Golang-tools/archive/master.zip
 
 https://github.com/HariSekhon/go-lib/archive/master.zip
 
@@ -225,7 +225,7 @@ bash-tools/setup/install_homebrew.sh
 
 #### Configuration for Strict Domain / FQDN validation ####
 
-Strict validations include host/domain/FQDNs using TLDs which are populated from the official IANA list is done via my [PyLib](https://github.com/harisekhon/pylib) library submodule - see there for details on configuring this to permit custom TLDs like `.local`, `.intranet`, `.vm`, `.cloud` etc. (all already included in there because they're common across companies internal environments).
+Strict validations include host/domain/FQDNs using TLDs which are populated from the official IANA list is done via my [PyLib](https://github.com/HariSekhon/pylib) library submodule - see there for details on configuring this to permit custom TLDs like `.local`, `.intranet`, `.vm`, `.cloud` etc. (all already included in there because they're common across companies internal environments).
 
 ### Updating ###
 
@@ -236,7 +236,7 @@ Run ```make update```. This will git pull and then git submodule update which is
 
 [Continuous Integration](https://travis-ci.org/HariSekhon/devops-golang-tools) is run on this repo with tests for success and failure scenarios:
 - integration tests of the top level programs using the libraries for things like option parsing
-- [functional tests](https://github.com/HariSekhon/devops-golang-tools/tree/master/tests) for the top level programs using local test data and [Docker containers](https://hub.docker.com/u/harisekhon/)
+- [functional tests](https://github.com/HariSekhon/DevOps-Golang-tools/tree/master/tests) for the top level programs using local test data and [Docker containers](https://hub.docker.com/u/harisekhon/)
 
 To trigger all tests run:
 
@@ -252,15 +252,15 @@ Patches, improvements and even general feedback are welcome in the form of GitHu
 
 ### See Also ###
 
-- [DevOps Bash Tools](https://github.com/harisekhon/devops-bash-tools) - 700+ DevOps Bash Scripts, Advanced `.bashrc`, `.vimrc`, `.screenrc`, `.tmux.conf`, `.gitconfig`, CI configs & Utility Code Library - AWS, GCP, Kubernetes, Docker, Kafka, Hadoop, SQL, BigQuery, Hive, Impala, PostgreSQL, MySQL, LDAP, DockerHub, Jenkins, Spotify API & MP3 tools, Git tricks, GitHub API, GitLab API, BitBucket API, Code & build linting, package management for Linux / Mac / Python / Perl / Ruby / NodeJS / Golang, and lots more random goodies
+- [DevOps Bash Tools](https://github.com/HariSekhon/DevOps-Bash-tools) - 700+ DevOps Bash Scripts, Advanced `.bashrc`, `.vimrc`, `.screenrc`, `.tmux.conf`, `.gitconfig`, CI configs & Utility Code Library - AWS, GCP, Kubernetes, Docker, Kafka, Hadoop, SQL, BigQuery, Hive, Impala, PostgreSQL, MySQL, LDAP, DockerHub, Jenkins, Spotify API & MP3 tools, Git tricks, GitHub API, GitLab API, BitBucket API, Code & build linting, package management for Linux / Mac / Python / Perl / Ruby / NodeJS / Golang, and lots more random goodies
 
 - [SQL Scripts](https://github.com/HariSekhon/SQL-scripts) - 100+ SQL Scripts - PostgreSQL, MySQL, AWS Athena, Google BigQuery
 
-- [DevOps Python Tools](https://github.com/harisekhon/devops-python-tools) - 80+ DevOps CLI tools for AWS, GCP, Hadoop, HBase, Spark, Log Anonymizer, Ambari Blueprints, AWS CloudFormation, Linux, Docker, Spark Data Converters & Validators (Avro / Parquet / JSON / CSV / INI / XML / YAML), Elasticsearch, Solr, Travis CI, Pig, IPython
+- [DevOps Python Tools](https://github.com/HariSekhon/DevOps-Python-tools) - 80+ DevOps CLI tools for AWS, GCP, Hadoop, HBase, Spark, Log Anonymizer, Ambari Blueprints, AWS CloudFormation, Linux, Docker, Spark Data Converters & Validators (Avro / Parquet / JSON / CSV / INI / XML / YAML), Elasticsearch, Solr, Travis CI, Pig, IPython
 
 - [DevOps Perl Tools](https://github.com/harisekhon/perl-tools) - 25+ DevOps CLI tools for Hadoop, HDFS, Hive, Solr/SolrCloud CLI, Log Anonymizer, Nginx stats & HTTP(S) URL watchers for load balanced web farms, Dockerfiles & SQL ReCaser (MySQL, PostgreSQL, AWS Redshift, Snowflake, Apache Drill, Hive, Impala, Cassandra CQL, Microsoft SQL Server, Oracle, Couchbase N1QL, Dockerfiles, Pig Latin, Neo4j, InfluxDB), Ambari FreeIPA Kerberos, Datameer, Linux...
 
-- [The Advanced Nagios Plugins Collection](https://github.com/harisekhon/nagios-plugins) - 450+ programs for Nagios monitoring your Hadoop & NoSQL clusters. Covers every Hadoop vendor's management API and every major NoSQL technology (HBase, Cassandra, MongoDB, Elasticsearch, Solr, Riak, Redis etc.) as well as message queues (Kafka, RabbitMQ), continuous integration (Jenkins, Travis CI) and traditional infrastructure (SSL, Whois, DNS, Linux)
+- [The Advanced Nagios Plugins Collection](https://github.com/HariSekhon/Nagios-Plugins) - 450+ programs for Nagios monitoring your Hadoop & NoSQL clusters. Covers every Hadoop vendor's management API and every major NoSQL technology (HBase, Cassandra, MongoDB, Elasticsearch, Solr, Riak, Redis etc.) as well as message queues (Kafka, RabbitMQ), continuous integration (Jenkins, Travis CI) and traditional infrastructure (SSL, Whois, DNS, Linux)
 
 - [HAProxy Configs](https://github.com/HariSekhon/HAProxy-configs) - 80+ HAProxy Configs for Hadoop, Big Data, NoSQL, Docker, Elasticsearch, SolrCloud, HBase, Cloudera, Hortonworks, MapR, MySQL, PostgreSQL, Apache Drill, Hive, Presto, Impala, ZooKeeper, OpenTSDB, InfluxDB, Prometheus, Kibana, Graphite, SSH, RabbitMQ, Redis, Riak, Rancher etc.
 
@@ -270,9 +270,9 @@ Patches, improvements and even general feedback are welcome in the form of GitHu
 
 - [Dockerfiles](https://github.com/HariSekhon/Dockerfiles) - 50+ DockerHub public images for Docker & Kubernetes - Hadoop, Kafka, ZooKeeper, HBase, Cassandra, Solr, SolrCloud, Presto, Apache Drill, Nifi, Spark, Mesos, Consul, Riak, OpenTSDB, Jython, Advanced Nagios Plugins & DevOps Tools repos on Alpine, CentOS, Debian, Fedora, Ubuntu, Superset, H2O, Serf, Alluxio / Tachyon, FakeS3
 
-- [PyLib](https://github.com/harisekhon/pylib) - Python library
+- [PyLib](https://github.com/HariSekhon/pylib) - Python library
 
-- [Perl Lib](https://github.com/harisekhon/lib) - Perl library
+- [Perl Lib](https://github.com/HariSekhon/lib) - Perl library
 
 <!--
 - [Spark Apps eg. Spark => Elasticsearch](https://github.com/harisekhon/spark-to-elasticsearch) - Scala application to index from Spark to Elasticsearch. Used to index data in Hadoop clusters or local data via Spark standalone. This started as a Scala Spark port of ```pig-text-to-elasticsearch.pig``` from this repo.

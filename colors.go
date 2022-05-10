@@ -12,7 +12,7 @@
 //
 //  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback to help steer this or other code I publish
 //
-//  https://www.linkedin.com/in/harisekhon
+//  https://www.linkedin.com/in/HariSekhon
 //
 
 package main
@@ -29,7 +29,7 @@ import (
 const description = `
 Program to show all the ASCII terminal code Foreground/Background color combinations in a terminal to make it easy to pick for writing fancy programs
 
-Ported from an original Perl version from 2014 in the DevOps Perl tools repo: https://github.com/harisekhon/devops-perl-tools
+Ported from an original Perl version from 2014 in the DevOps Perl tools repo: https://github.com/HariSekhon/DevOps-Perl-tools
 
 Tested on Mac OS X and Linux
 `

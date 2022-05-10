@@ -11,7 +11,7 @@
 //
 //  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback to help steer this or other code I publish
 //
-//  https://www.linkedin.com/in/harisekhon
+//  https://www.linkedin.com/in/HariSekhon
 //
 
 package main
@@ -30,7 +30,7 @@ import (
 const description = `
 Returns the first HTTP(s) server argument to respond and serve its default page without error
 
-See also much more mature version find_active_server.py in DevOps Python tools - https://github.com/harisekhon/DevOps-Python-tools
+See also much more mature version find_active_server.py in DevOps Python tools - https://github.com/HariSekhon/DevOps-Python-tools
 `
 
 var prog = path.Base(os.Args[0])

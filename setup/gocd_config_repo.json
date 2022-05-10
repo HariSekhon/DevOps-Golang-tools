@@ -4,7 +4,7 @@
   "material": {
     "type": "git",
     "attributes": {
-  	"url": "https://github.com/harisekhon/devops-golang-tools",
+  	"url": "https://github.com/HariSekhon/DevOps-Golang-tools",
   	"branch": "master",
   	"auto_update": true
     }

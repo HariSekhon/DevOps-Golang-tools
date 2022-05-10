@@ -2,11 +2,11 @@
 #  Author: Hari Sekhon
 #  Date: 2013-02-03 10:25:36 +0000 (Sun, 03 Feb 2013)
 #
-#  https://github.com/harisekhon/devops-golang-tools
+#  https://github.com/HariSekhon/DevOps-Golang-tools
 #
 #  License: see accompanying LICENSE file
 #
-#  https://www.linkedin.com/in/harisekhon
+#  https://www.linkedin.com/in/HariSekhon
 #
 
 # ===================
@@ -18,15 +18,15 @@
 #
 # Alpine:
 #
-#   apk add --no-cache git make && git clone https://github.com/harisekhon/devops-golang-tools go-tools && cd go-tools && make
+#   apk add --no-cache git make && git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools && cd go-tools && make
 #
 # Debian / Ubuntu:
 #
-#   apt-get update && apt-get install -y make git && git clone https://github.com/harisekhon/devops-golang-tools go-tools && cd go-tools && make
+#   apt-get update && apt-get install -y make git && git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools && cd go-tools && make
 #
 # RHEL / CentOS:
 #
-#   yum install -y make git && git clone https://github.com/harisekhon/devops-golang-tools go-tools && cd go-tools && make
+#   yum install -y make git && git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools && cd go-tools && make
 
 # ===================
 
