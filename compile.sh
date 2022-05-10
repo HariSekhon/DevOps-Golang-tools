@@ -4,7 +4,7 @@
 #  Author: Hari Sekhon
 #  Date: 2021-01-01 22:07:48 +0000 (Fri, 01 Jan 2021)
 #
-#  https://github.com/HariSekhon/go-tools
+#  https://github.com/HariSekhon/DevOps-Golang-tools
 #
 #  License: see accompanying Hari Sekhon LICENSE file
 #

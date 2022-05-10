@@ -6,7 +6,7 @@
 //  Original Date: 2014-06-07 22:17:09 +0100 (Sat, 07 Jun 2014)
 //  Ported from Perl version in DevOps Perl tools repo
 //
-//  https://github.com/harisekhon/go-tools
+//  https://github.com/HariSekhon/DevOps-Golang-tools
 //
 //  License: see accompanying Hari Sekhon LICENSE file
 //

@@ -5,7 +5,7 @@
 //  Date: 2020-06-01 20:11:40 +0100 (Mon, 01 Jun 2020)
 //  Original Date: 2015-02-07 16:06:33 +0000 (Sat, 07 Feb 2015)
 //
-//  https://github.com/harisekhon/go-tools
+//  https://github.com/HariSekhon/DevOps-Golang-tools
 //
 //  License: see accompanying Hari Sekhon LICENSE file
 //
