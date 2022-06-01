@@ -24,6 +24,8 @@ set -eu
 
 isExcluded(){
     local prog="$1"
+    # false positive
+    # shellcheck disable=SC2049
     [[ "$prog" =~ ^\* ]] && return 0
     # this external git check is expensive, skip it when in CI as using fresh git checkouts
     is_CI && return 1
