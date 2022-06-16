@@ -1,5 +1,4 @@
-Hari Sekhon - DevOps Golang Tools
-=================================
+# Hari Sekhon - DevOps Golang Tools
 
 [![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/network)
