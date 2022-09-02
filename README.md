@@ -112,10 +112,6 @@
 
 ## DevOps Golang Tools
 
-<!--
-A few of the Cloud, Big Data, NoSQL & Linux tools I've written over the years.
--->
-
 All programs have `--help` to list the available options.
 
 See Also:
@@ -194,31 +190,9 @@ Enter the go-tools directory and run git submodule init and git submodule update
 ```
 git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools
 cd go-tools
-git submodule init
-git submodule update
-go build
+git submodule update --init
+./compile.sh
 ```
-
-<!--
-#### Offline Setup
-
-Download the DevOps Golang Tools and Go-lib git repos as zip files:
-
-https://github.com/HariSekhon/DevOps-Golang-tools/archive/master.zip
-
-https://github.com/HariSekhon/go-lib/archive/master.zip
-
-Unzip both and move go-lib to the ```src/github.com/HariSekhon/``` folder.
-
-```
-unzip devops-golang-tools-master.zip
-unzip go-lib-master.zip
-
-mv -v devops-golang-tools-master go-tools
-mv -v go-lib-master go-lib
-mv -vf go-lib go-tools/src/github.com/HariSekhon/
-```
--->
 
 ##### Mac OS X
 
@@ -231,28 +205,10 @@ bash-tools/setup/install_homebrew.sh
 ```
 
 
-#### Configuration for Strict Domain / FQDN validation ####
-
-Strict validations include host/domain/FQDNs using TLDs which are populated from the official IANA list is done via my [PyLib](https://github.com/HariSekhon/pylib) library submodule - see there for details on configuring this to permit custom TLDs like `.local`, `.intranet`, `.vm`, `.cloud` etc. (all already included in there because they're common across companies internal environments).
-
 ### Updating ###
 
 Run ```make update```. This will git pull and then git submodule update which is necessary to pick up corresponding library updates.
 
-
-### Testing
-
-[Continuous Integration](https://travis-ci.org/HariSekhon/devops-golang-tools) is run on this repo with tests for success and failure scenarios:
-- integration tests of the top level programs using the libraries for things like option parsing
-- [functional tests](https://github.com/HariSekhon/DevOps-Golang-tools/tree/master/tests) for the top level programs using local test data and [Docker containers](https://hub.docker.com/u/harisekhon/)
-
-To trigger all tests run:
-
-```
-make test
-```
-
-which will start with the underlying libraries, then move on to top level integration tests and functional tests using docker containers if docker is available.
 
 ### Contributions ###
 
