@@ -1,5 +1,5 @@
 {
-  "id": "devops-golang-tools",
+  "id": "DevOps-Golang-tools",
   "plugin_id": "yaml.config.plugin",
   "material": {
     "type": "git",
