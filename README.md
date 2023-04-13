@@ -47,7 +47,6 @@
 [![BuildKite](https://img.shields.io/buildkite/e2deddfa45087ac7984c456cb93319ef434ac996c7c1006833/master?label=BuildKite&logo=buildkite)](https://buildkite.com/hari-sekhon/devops-golang-tools)
 [![AppVeyor](https://img.shields.io/appveyor/build/harisekhon/DevOps-Golang-tools/master?logo=appveyor&label=AppVeyor)](https://ci.appveyor.com/project/HariSekhon/DevOps-Golang-tools/branch/master)
 [![Drone](https://img.shields.io/drone/build/HariSekhon/DevOps-Golang-tools/master?logo=drone&label=Drone)](https://cloud.drone.io/HariSekhon/DevOps-Golang-tools)
-[![Codeship Status for HariSekhon/DevOps-Golang-tools](https://app.codeship.com/projects/11baaaff-5962-45dd-8a7d-477f60632c16/status?branch=master)](https://app.codeship.com/projects/387251)
 [![Codefresh](https://g.codefresh.io/api/badges/pipeline/harisekhon/GitHub%2FDevOps-Golang-tools?key=eyJhbGciOiJIUzI1NiJ9.NWU1MmM5OGNiM2FiOWUzM2Y3ZDZmYjM3.O69674cW7vYom3v5JOGKXDbYgCVIJU9EWhXUMHl3zwA&date=1609528430541)](https://g.codefresh.io/pipelines/edit/new/builds?id=5fef73e62e168ebc6dd24d07&pipeline=DevOps-Golang-tools&projects=GitHub&projectId=5fef73e62e168ebc6dd24d07&context=github&filter=page:1;pageSize:10;timeFrameStart:week)
 [![Cirrus CI](https://img.shields.io/cirrus/github/HariSekhon/DevOps-Golang-tools/master?logo=Cirrus%20CI&label=Cirrus%20CI)](https://cirrus-ci.com/github/HariSekhon/DevOps-Golang-tools)
 [![Semaphore](https://harisekhon.semaphoreci.com/badges/DevOps-Golang-tools.svg)](https://harisekhon.semaphoreci.com/projects/DevOps-Golang-tools)
