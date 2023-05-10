@@ -58,7 +58,7 @@ build: init
 	@#$(MAKE) system-packages-golang
 	# provides OS specific build packages for compiling golang modules, such as gcc, and distro specific stdlib packages, build-essential on debian/ubuntu etc
 	$(MAKE) system-packages
-	@bash-tools/install_packages_if_absent.sh golang
+	@bash-tools/packages/install_packages_if_absent.sh golang
 
 	$(MAKE) golang
 
@@ -106,7 +106,7 @@ test: # test-lib
 
 .PHONY: basic-test
 basic-test: test-lib
-	bash-tools/check_all.sh
+	bash-tools/checks/check_all.sh
 
 .PHONY: install
 install: build
