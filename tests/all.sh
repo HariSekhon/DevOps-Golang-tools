@@ -27,8 +27,8 @@ export PROJECT="devops-golang-tools"
 
 section "DevOps Golang Tools ALL Tests"
 
-#bash-tools/check_all.sh
+#bash-tools/checks/check_all.sh
 
 #tests/help.sh
 
-bash-tools/run_tests.sh
+bash-tools/checks/run_tests.sh
