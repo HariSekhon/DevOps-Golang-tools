@@ -68,9 +68,10 @@
 [![YAML](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/yaml.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/yaml.yaml)
 [![XML](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/xml.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/xml.yaml)
 [![Validation](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/validate.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/validate.yaml)
+[![Kics](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/kics.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/kics.yaml)
 [![Semgrep](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/semgrep.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/semgrep.yaml)
 [![Semgrep Cloud](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/semgrep-cloud.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/semgrep-cloud.yaml)
-[![Kics](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/kics.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/kics.yaml)
+[![Trivy](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/trivy.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/trivy.yaml)
 
 [![GitHub Actions Ubuntu](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/GitHub%20Actions%20Ubuntu/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22GitHub+Actions+Ubuntu%22)
 [![Mac](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/mac.yaml/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions/workflows/mac.yaml)
