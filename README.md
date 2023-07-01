@@ -84,6 +84,7 @@
 [![Debian](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Debian/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Debian%22)
 [![Debian 10](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Debian%2010/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Debian+10%22)
 [![Debian 11](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Debian%2011/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Debian+11%22)
+[![Debian 12](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/Debian%2012/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22Debian+12%22)
 [![CentOS](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/CentOS/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22CentOS%22)
 [![CentOS 7](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/CentOS%207/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22CentOS+7%22)
 [![CentOS 8](https://github.com/HariSekhon/DevOps-Golang-tools/workflows/CentOS%208/badge.svg)](https://github.com/HariSekhon/DevOps-Golang-tools/actions?query=workflow%3A%22CentOS+8%22)
