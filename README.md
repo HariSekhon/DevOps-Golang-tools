@@ -3,6 +3,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/harisekhon/devops-golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/harisekhon/devops-golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/network)
 [![License](https://img.shields.io/github/license/HariSekhon/DevOps-Golang-tools)](https://github.com/HariSekhon/DevOps-Golang-tools/blob/master/LICENSE)
+[![My LinkedIn](https://img.shields.io/badge/LinkedIn%20Profile-HariSekhon-blue?logo=linkedin)](https://www.linkedin.com/in/HariSekhon/)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/HariSekhon/DevOps-Golang-tools?logo=github)](https://github.com/HariSekhon/DevOps-Golang-tools/commits/master)
 <!-- doesn't include /tests?/ or comments
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=HariSekhon_DevOps-Golang-tools&metric=ncloc)](https://sonarcloud.io/dashboard?id=HariSekhon_DevOps-Golang-tools)
