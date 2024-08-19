@@ -175,6 +175,7 @@ Environment variables are supported for convenience and also to hide credentials
 
 - Linux:
   - ```uniq2.go``` - like `uniq` but you don't have to sort first and it preserves the ordering
+  - ```diffnet.go``` - simplifies diff output to show only lines added/removed, not moved, from patch files or stdin (pipe from standard `diff` or `git diff` commands)
   - ```httpfirst.go``` - returns the first http/https url address argument to respond (fastest multi-threaded reply using go channels). More sophisticated version is `find_active_server.py` in the [DevOps Python tools](https://github.com/HariSekhon/DevOps-Python-tools) repo which can handle multi-master clusters, tcp sockets, regex etc.
   - ```colors.go``` - prints a table of terminal colors and their escape codes for doing fancy shell stuff
   - ```welcome.go``` - cool spinning welcome message greeting your username and showing last login time and user to put in your shell's ```.profile``` (there are also Python and Perl versions in my [DevOps Python Tools](https://github.com/HariSekhon/DevOps-Python-tools) and [DevOps Perl Tools](https://github.com/HariSekhon/DevOps-Perl-tools) repos)
