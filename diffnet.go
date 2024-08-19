@@ -93,9 +93,9 @@ func diffnet(scanner *bufio.Scanner) {
 		}
 
 		// Handle additions and removals
-		if (strings.HasPrefix(line, "+") || strings.HasPrefix(line, ">")) && !strings.HasPrefix(line, "+++ ") {
+		if (strings.HasPrefix(line, "+") || strings.HasPrefix(line, ">")) {
 			additions[lineNum] = line[1:]
-		} else if (strings.HasPrefix(line, "-") || strings.HasPrefix(line, "<")) && !strings.HasPrefix(line, "--- ") {
+		} else if (strings.HasPrefix(line, "-") || strings.HasPrefix(line, "<")) {
 			removals[lineNum] = line[1:]
 		}
 	}
