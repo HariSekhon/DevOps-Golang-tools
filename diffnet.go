@@ -78,6 +78,12 @@ func diffnet(scanner *bufio.Scanner) {
 	for scanner.Scan() {
 		line := scanner.Text()
 		lineNum++
+
+		// Skip header lines (---, +++, @@)
+		if strings.HasPrefix(line, "---") || strings.HasPrefix(line, "+++") || strings.HasPrefix(line, "@@") {
+			continue
+		}
+
 		if addPrefix == "" && strings.HasPrefix(line, "+") {
 			addPrefix = "+"
 		}
