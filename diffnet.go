@@ -84,16 +84,18 @@ func diffnet(scanner *bufio.Scanner) {
 			continue
 		}
 
-		if addPrefix == "" && strings.HasPrefix(line, "+") {
-			addPrefix = "+"
+		// Detect prefixes if not yet set
+		if addPrefix == "" && (strings.HasPrefix(line, "+") || strings.HasPrefix(line, ">")) {
+			addPrefix = string(line[0])
 		}
-		if removePrefix == "" && strings.HasPrefix(line, "-") {
-			removePrefix = "-"
+		if removePrefix == "" && (strings.HasPrefix(line, "-") || strings.HasPrefix(line, "<")) {
+			removePrefix = string(line[0])
 		}
 
-		if strings.HasPrefix(line, "+") {
+		// Handle additions and removals
+		if (strings.HasPrefix(line, "+") || strings.HasPrefix(line, ">")) && !strings.HasPrefix(line, "+++ ") {
 			additions[lineNum] = line[1:]
-		} else if strings.HasPrefix(line, "-") {
+		} else if (strings.HasPrefix(line, "-") || strings.HasPrefix(line, "<")) && !strings.HasPrefix(line, "--- ") {
 			removals[lineNum] = line[1:]
 		}
 	}
