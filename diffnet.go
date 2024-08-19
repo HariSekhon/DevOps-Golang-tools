@@ -46,7 +46,7 @@ import (
 	"strings"
 )
 
-// Command-line options
+// Command line options
 var (
 	additionsOnly     = flag.Bool("a", false, "Show only additions")
 	removalsOnly      = flag.Bool("r", false, "Show only removals")
@@ -79,7 +79,6 @@ func diffnet(scanner *bufio.Scanner) {
 		line := scanner.Text()
 		lineNum++
 
-		// Skip header lines (---, +++, @@)
 		if strings.HasPrefix(line, "---") || strings.HasPrefix(line, "+++") || strings.HasPrefix(line, "@@") {
 			continue
 		}
@@ -92,7 +91,6 @@ func diffnet(scanner *bufio.Scanner) {
 			removePrefix = string(line[0])
 		}
 
-		// Handle additions and removals
 		if (strings.HasPrefix(line, "+") || strings.HasPrefix(line, ">")) {
 			additions[lineNum] = line[1:]
 		} else if (strings.HasPrefix(line, "-") || strings.HasPrefix(line, "<")) {
