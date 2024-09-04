@@ -112,15 +112,6 @@
 
 All programs have `--help` to list the available options.
 
-See Also:
-
-  - [DevOps Bash Tools](https://github.com/HariSekhon/DevOps-Bash-tools)
-  - [DevOps Python Tools](https://github.com/HariSekhon/DevOps-Python-tools)
-  - [DevOps Perl Tools](https://github.com/HariSekhon/DevOps-Perl-tools)
-  - [Advanced Nagios Plugins Collection](https://github.com/HariSekhon/Nagios-Plugins)
-
-repos which contain hundreds of Cloud, Big Data, NoSQL, Web, Linux and other DevOps infrastructure tools.
-
 Hari Sekhon
 
 Cloud & Big Data Contractor, United Kingdom
@@ -128,7 +119,7 @@ Cloud & Big Data Contractor, United Kingdom
 [https://www.linkedin.com/in/HariSekhon](https://www.linkedin.com/in/HariSekhon)
 <br>*(you're welcome to connect with me on LinkedIn)*
 
-##### Make sure you run ```make update``` if updating and not just ```git pull``` as you will often need the latest library submodule and possibly new upstream libraries #####
+**Make sure you run ```make update``` if updating and not just ```git pull``` as you will often need the latest library submodule and possibly new upstream libraries**
 
 ## Quick Start
 
@@ -137,23 +128,28 @@ Cloud & Big Data Contractor, United Kingdom
 All programs and their pre-compiled dependencies can be found ready to run on [DockerHub](https://hub.docker.com/r/harisekhon/go-tools/).
 
 List all programs:
-```
+
+```shell
 docker run harisekhon/go-tools
 ```
+
 Run any given program:
-```
+
+```shell
 docker run harisekhon/go-tools <program> <args>
 ```
 
 ### Automated Build from source
 
 installs git, make, pulls the repo and build the binaries:
-```
+
+```shell
 curl -L https://git.io/go-bootstrap | sh
 ```
 
 or manually:
-```
+
+```shell
 git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools
 cd go-tools
 make
@@ -186,7 +182,7 @@ Environment variables are supported for convenience and also to hide credentials
 
 Enter the go-tools directory and run git submodule init and git submodule update to fetch my library repo:
 
-```
+```shell
 git clone https://github.com/HariSekhon/DevOps-Golang-tools go-tools
 cd go-tools
 git submodule update --init
@@ -199,17 +195,15 @@ The automated build also works on Mac OS X but you'll need to install [Apple XCo
 
 I also recommend you get [HomeBrew](https://brew.sh/) to install other useful tools and libraries you may need like OpenSSL for development headers and tools such as wget (these are installed automatically if Homebrew is detected on Mac OS X):
 
-```
+```shell
 bash-tools/install/install_homebrew.sh
 ```
 
-
-### Updating ###
+### Updating
 
 Run ```make update```. This will git pull and then git submodule update which is necessary to pick up corresponding library updates.
 
-
-### Contributions ###
+### Contributions
 
 Patches, improvements and even general feedback are welcome in the form of GitHub pull requests and issue tickets.
 
