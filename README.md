@@ -119,7 +119,7 @@ Cloud & Big Data Contractor, United Kingdom
 [https://www.linkedin.com/in/HariSekhon](https://www.linkedin.com/in/HariSekhon)
 <br>*(you're welcome to connect with me on LinkedIn)*
 
-**Make sure you run ```make update``` if updating and not just ```git pull``` as you will often need the latest library submodule and possibly new upstream libraries**
+**Make sure you run `make update` if updating and not just `git pull` as you will often need the latest library submodule and possibly new upstream libraries**
 
 ## Quick Start
 
@@ -163,9 +163,9 @@ Alternatively there is shebang magic which means each `.go` program can be calle
 
 ### Usage
 
-All programs come with a ```--help``` switch which includes a program description and the list of command line options.
+All programs come with a `--help` switch which includes a program description and the list of command line options.
 
-Environment variables are supported for convenience and also to hide credentials from being exposed in the process list eg. ```$PASSWORD```, ```$TRAVIS_TOKEN```. These are indicated in the ```--help``` descriptions in brackets next to each option and often have more specific overrides with higher precedence eg. ```$AMBARI_HOST```, ```$HBASE_HOST``` take priority over ```$HOST```.
+Environment variables are supported for convenience and also to hide credentials from being exposed in the process list eg. `$PASSWORD`, `$TRAVIS_TOKEN`. These are indicated in the `--help` descriptions in brackets next to each option and often have more specific overrides with higher precedence eg. `$AMBARI_HOST`, `$HBASE_HOST` take priority over `$HOST`.
 
 ### DevOps Golang Tools - Inventory
 
@@ -210,7 +210,7 @@ bash-tools/install/install_homebrew.sh
 
 ### Updating
 
-Run ```make update```. This will git pull and then git submodule update which is necessary to pick up corresponding library updates.
+Run `make update`. This will git pull and then git submodule update which is necessary to pick up corresponding library updates.
 
 ### Contributions
 
