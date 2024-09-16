@@ -216,9 +216,9 @@ Run ```make update```. This will git pull and then git submodule update which is
 
 Patches, improvements and even general feedback are welcome in the form of GitHub pull requests and issue tickets.
 
-### Stargazers over time
+## Star History
 
-[![Stargazers over time](https://starchart.cc/HariSekhon/DevOps-Golang-tools.svg)](https://starchart.cc/HariSekhon/DevOps-Golang-tools)
+[![Star History Chart](https://api.star-history.com/svg?repos=HariSekhon/DevOps-Golang-tools&type=Date)](https://star-history.com/#HariSekhon/DevOps-Golang-tools&Date)
 
 [git.io/go-tools](https://git.io/go-tools)
 
