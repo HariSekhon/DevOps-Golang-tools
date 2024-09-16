@@ -82,12 +82,12 @@ func main() {
 	}
 	defer file.Close()
 
-	// Scan through each line of the file
+	// use a map to dedupe .so libraries
+	soFiles := make(map[string]bool)
+
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
-
-		// Split the line by spaces to get the different fields
 		fields := strings.Fields(line)
 		if len(fields) == 0 {
 			continue
@@ -100,10 +100,14 @@ func main() {
 		if strings.HasSuffix(libPath, ".so") || strings.Contains(libPath, ".so.") {
 			// get the absolute path of the shared library
 			absPath, err := filepath.EvalSymlinks(libPath)
-			if err == nil {
+			if err != nil {
+				absPath = libPath
+			}
+
+			// dedupe .so against map
+			if !soFiles[absPath] {
+				soFiles[absPath] = true
 				fmt.Println(absPath)
-			} else {
-				fmt.Println(libPath)
 			}
 		}
 	}
@@ -118,7 +122,7 @@ func isNumeric(arg string) bool {
 	return err == nil
 }
 
-// Helper function to get the maximum possible PID from /proc/sys/kernel/pid_max
+// get the maximum possible PID from /proc/sys/kernel/pid_max
 func getMaxPid() (int, error) {
 	data, err := ioutil.ReadFile("/proc/sys/kernel/pid_max")
 	if err != nil {
