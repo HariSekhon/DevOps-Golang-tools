@@ -155,9 +155,12 @@ cd go-tools
 make
 ```
 
-The `make` command automates building the go binaries which can then be copied around to other systems of the same family, eg. Linux or Mac.
+The `make` command automates building the go binaries which can then be copied around to other systems of the same
+family, eg. Linux or Mac.
 
-Alternatively there is shebang magic which means each `.go` program can be called directly like a script and it'll runtime compile and execute instantly like a scripted language. This is a neat trick for quick usage and testing built on `go run`, but for frequent use the compiled binaries are usually the way to go.
+Alternatively there is shebang magic which means each `.go` program can be called directly like a script and it'll
+runtime compile and execute instantly like a scripted language. This is a neat trick for quick usage and testing built
+on `go run`, but for frequent use the compiled binaries are usually the way to go.
 
 [Detailed Build Instructions](https://github.com/HariSekhon/DevOps-Golang-tools#detailed-build-instructions) are available further down.
 
@@ -165,7 +168,9 @@ Alternatively there is shebang magic which means each `.go` program can be calle
 
 All programs come with a `--help` switch which includes a program description and the list of command line options.
 
-Environment variables are supported for convenience and also to hide credentials from being exposed in the process list eg. `$PASSWORD`, `$TRAVIS_TOKEN`. These are indicated in the `--help` descriptions in brackets next to each option and often have more specific overrides with higher precedence eg. `$AMBARI_HOST`, `$HBASE_HOST` take priority over `$HOST`.
+Environment variables are supported for convenience and also to hide credentials from being exposed in the process list
+eg. `$PASSWORD`, `$TRAVIS_TOKEN`. These are indicated in the `--help` descriptions in brackets next to each option and
+often have more specific overrides with higher precedence eg. `$AMBARI_HOST`, `$HBASE_HOST` take priority over `$HOST`.
 
 ### DevOps Golang Tools - Inventory
 
@@ -200,9 +205,11 @@ git submodule update --init
 
 ##### Mac OS X
 
-The automated build also works on Mac OS X but you'll need to install [Apple XCode](https://developer.apple.com/download/) (on recent Macs just typing `git` is enough to trigger Xcode install).
+The automated build also works on Mac OS X but you'll need to install [Apple XCode](https://developer.apple.com/download/) (on recent Macs just typing
+`git` is enough to trigger Xcode install).
 
-I also recommend you get [HomeBrew](https://brew.sh/) to install other useful tools and libraries you may need like OpenSSL for development headers and tools such as wget (these are installed automatically if Homebrew is detected on Mac OS X):
+I also recommend you get [HomeBrew](https://brew.sh/) to install other useful tools and libraries you may need like OpenSSL for
+development headers and tools such as wget (these are installed automatically if Homebrew is detected on Mac OS X):
 
 ```shell
 bash-tools/install/install_homebrew.sh
@@ -210,7 +217,8 @@ bash-tools/install/install_homebrew.sh
 
 ### Updating
 
-Run `make update`. This will git pull and then git submodule update which is necessary to pick up corresponding library updates.
+Run `make update`. This will git pull and then git submodule update which is necessary to pick up corresponding library
+updates.
 
 ### Contributions
 
