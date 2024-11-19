@@ -51,7 +51,7 @@ fi
 
 if is_mac; then
     readlink(){
-        greadlink "$@"
+        command greadlink "$@"
     }
 fi
 
