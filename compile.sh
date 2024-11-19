@@ -49,12 +49,6 @@ if ! is_golang_min_version 1.9; then
     export GOROOT="$HOME/bin/go"
 fi
 
-if is_mac; then
-    readlink(){
-        command greadlink "$@"
-    }
-fi
-
 readlink_go="$(readlink -f "$(command -v go)")"
 
 # fix for GitHub Actions Ubuntu latest which has broken environment:
