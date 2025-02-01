@@ -13,7 +13,7 @@
 
 name: Golang 1.17
 
-on:
+on:  # yamllint disable-line rule:truthy
   push:
     branches:
       - master
